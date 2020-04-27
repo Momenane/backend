@@ -43,7 +43,7 @@
 * notes/info
 * donation (روش‌های کمک و مشارکت)
 * total region/location/address
-* amount/volume
+* amount/volume/goods
 * [documentaion (مستندات)]
 
 ## Org-Plan-History
