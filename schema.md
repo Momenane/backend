@@ -17,22 +17,42 @@
 * [logo]
 * روش کمک
 
+## Organization-Messages
+
+* id
+* Org-id
+* message
+* title
+* status
+
 ## Org-Users
 
 * id
 * name {first, last}
+* national code
+* email
 * tel
 * permission (admin|editor|register|reporter)
 
 ## Consumer-Users
 
 * id
-* [name]
-* national code
-* location or region
-* access way
+* [name](first and last)
+* age (سن)
+* sex (جنسیت)
+* national code (کد ملی)
+* location or region 
+* وضعیت تأهل
+* وضعیت مسکن
+* سرپرست خانواده
+* job شغل
+* earning (درآمد)
+* list of family member + age
+* access way (tel, email)
+* other org membership (شماره‌ی کمیته‌ی امداد، بهزیستی و ...)
+* comment
 * register date
-* register by org-user->id
+* register by org-user->id (تأیید شده توسط)
 * under support of organization(s)
 
 ## Org-Plan

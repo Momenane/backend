@@ -26,7 +26,7 @@ app.use(session({
   cookie: { secure: true }
 }));
 app.use(bodyParser.json())
-app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(upload.array());
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(express.static(path.join(__dirname, 'public')));
@@ -48,7 +48,10 @@ passport.deserializeUser(function (id, done) {
 });
 passport.use(new LocalStrategy(
   function (username, password, done) {
-    User.findOne({ attributes: ['id', 'role', 'password', 'salt'], where: { username } }).then((user) => {
+    User.findOne({
+      attributes: ['id', 'role', 'password', 'salt'],
+      where: { username }
+    }).then((user) => {
       if (user != null) {//&& user instanceof User
         var res = user.password == User.getStorePassword(password, user.salt);
         if (!res)
