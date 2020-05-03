@@ -31,7 +31,13 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+db["Group"].belongsTo(db["User"] ,{foreignKey : 'head_id'})
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+
+
+
 
 module.exports = db;
