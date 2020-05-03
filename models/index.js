@@ -31,7 +31,9 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
-db["Group"].belongsTo(db["User"] ,{foreignKey : 'head_id'})
+db["User"].hasOne(db["Group"] ,{foreignKey : 'head_id'});
+db["Group"].hasMany(db["GroupMembers"] , {foreignKey : 'group_id'});
+db["GroupMembers"].belongsTo(db["Group"]);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
