@@ -12,7 +12,8 @@ router.get('/list', function (req, res, next) {
 });
 
 router.get('/get/:groupId/' , function (req , res , next) {
-    Group.findByPk(req.params.groupId , {include: ['GroupMembers']}).then(function(groupWithMembers) {
+    Group.findByPk(req.params.groupId , {include: ['GroupMembers']})
+    .then(function(groupWithMembers) {
         res.json(groupWithMembers);
     });
 });

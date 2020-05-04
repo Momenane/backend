@@ -21,7 +21,7 @@ fs
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
-    const model = sequelize['import'](path.join(__dirname, file));
+    const model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
 
@@ -31,15 +31,7 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
-db["User"].hasOne(db["Group"] ,{foreignKey : 'head_id'});
-db["Group"].hasMany(db["GroupMembers"] , {foreignKey : 'group_id'});
-db["GroupMembers"].belongsTo(db["Group"]);
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
-
-
-
 
 module.exports = db;

@@ -11,9 +11,12 @@ module.exports = (sequelize, DataTypes) => {
         address : DataTypes.TEXT,
         family_members : DataTypes.INTEGER,
         haveHouse : DataTypes.BOOLEAN,
-        monthlyـsalary‌: DataTypes.BIGINT,
+        monthly_salary: DataTypes.BIGINT,
         birth_date: DataTypes.STRING,
         group_id : DataTypes.INTEGER,
     }, {});
+    GroupMembers.associate = function (models) {
+        GroupMembers.belongsTo(models["Group"]);
+    };
     return GroupMembers;
 };
