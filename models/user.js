@@ -4,7 +4,6 @@ const { Model, DataTypes } = require("sequelize");
 const crypto = require('crypto');
 
 // change acording to https://codewithhugo.com/using-es6-classes-for-sequelize-4-models/
-// todo: change import to js require
 
 class User extends Model {
   static init(sequelize) {

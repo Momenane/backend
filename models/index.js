@@ -14,15 +14,14 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-var UserModel = require('./user');
-var GroupModel = require('./group');
-var GroupMembersModel = require('./groupMembers');
-
 const models = {
-  User: UserModel.init(sequelize),
-  Group: GroupModel.init(sequelize),
-  GroupMembers: GroupMembersModel.init(sequelize)
+  User: require('./user'),
+  Group: require('./group'),
+  GroupMembers: require('./groupMembers')
 };
+
+Object.values(models)
+  .forEach(model=> model.init(sequelize));
 
 // Run `.associate` if it exists,
 // ie create relationships in the ORM
