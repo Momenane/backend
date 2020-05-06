@@ -12,6 +12,7 @@ class Group extends Model {
   }
   static associate(models) {
     this.hasMany(models.GroupMembers, { foreignKey: 'group_id' });
+    this.belongsTo(models.User);
   }
 }
 

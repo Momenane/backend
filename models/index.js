@@ -14,7 +14,9 @@ if (config.use_env_variable) {
 const models = {
   User: require('./user'),
   Group: require('./group'),
-  GroupMembers: require('./groupMembers')
+  GroupMembers: require('./groupMembers'),
+  GroupPlans : require('./groupPlan'),
+  donateHistory : require('./donateHistory'),
 };
 
 Object.values(models)
