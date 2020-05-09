@@ -53,6 +53,17 @@ router.get('/id/:id', (req, res) => {
 });
 
 router.patch('/id/:id', (req, res) => {
+  let userId = req.params.id
+  User.findByPk(userId).then(
+      (user) => {
+        var body = req.body;
+        var keys = body.keys();
+        for (let i= 0;req.body.length ; i++){
+          user[keys[i]] = body[keys[i]];
+        }
+        user.save();
+        res.json({ error: 'plan updated successfully', msg: 'ok' })
+      }).catch(error => res.json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {

@@ -24,6 +24,17 @@ router.get('/id/:id/', function (req, res) {
 });
 
 router.patch('/id/:id', (req, res) => {
+    let groupId = req.params.id
+    Group.findByPk(groupId).then(
+        (group) => {
+            var body = req.body;
+            var keys = body.keys();
+            for (let i= 0;req.body.length ; i++){
+                group[keys[i]] = body[keys[i]];
+            }
+            group.save();
+            res.json({ error: 'Group updated successfully', msg: 'ok' })
+        }).catch(error => res.json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {

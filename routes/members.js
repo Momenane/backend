@@ -23,6 +23,17 @@ router.get('/id/:id/', function (req, res, next) {
 });
 
 router.patch('/id/:id', (req, res) => {
+    let memberId = req.params.id
+    Member.findByPk(memberId).then(
+        (member) => {
+            var body = req.body;
+            var keys = body.keys();
+            for (let i= 0;req.body.length ; i++){
+                member[keys[i]] = body[keys[i]];
+            }
+            member.save();
+            res.json({ error: 'Member updated successfully', msg: 'ok' })
+        }).catch(error => res.json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {

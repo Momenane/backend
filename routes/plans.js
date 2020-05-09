@@ -22,8 +22,17 @@ router.get('/id/:id/', function (req, res, next) {
 });
 
 router.patch('/id/:id', (req, res) => {
-
-
+  let planId = req.params.id
+  GroupPlans.findByPk(planId).then(
+      (plan) => {
+        var body = req.body;
+        var keys = body.keys();
+        for (let i= 0;req.body.length ; i++){
+          plan[keys[i]] = body[keys[i]];
+        }
+        plan.save();
+        res.json({ error: 'plan updated successfully', msg: 'ok' })
+      }).catch(error => res.json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {
