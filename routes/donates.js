@@ -5,23 +5,20 @@ var router = express.Router();
 router.post('/add', (req, res) => {
     DonateHistory.create(req.body)
         .then(donate => res.json(donate))
-        .catch(error => {
-        });
+        .catch(error => res.json({ error: 'insert error', msg: error }));
 })
 
 router.get('/list', function (req, res, next) {
     // todo: pagination
     DonateHistory.findAll()
         .then(donates => res.json(donates))
-        .catch(error => {
-        });
+        .catch(error => res.json({ error: 'fetch error', msg: error }));
 });
 
 router.get('/id/:id/', function (req, res, next) {
     DonateHistory.findByPk(req.params.id)
         .then(donate => res.json(donate))
-        .catch(error => {
-        });
+        .catch(error => res.json({ error: 'fetch error', msg: error }));
 });
 
 router.patch('/id/:id', (req, res) => {
@@ -34,7 +31,7 @@ router.patch('/id/:id', (req, res) => {
                 donate[keys[i]] = body[keys[i]];
             }
             donate.save();
-            res.json({error: 'Donate History updated successfully', msg: 'ok'})
+            res.json(donate)
         }).catch(error => res.json({error: 'update error', msg: error}));
 });
 

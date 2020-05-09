@@ -5,13 +5,13 @@ var router = express.Router();
 router.post('/add', (req, res) => {
   Member.create(req.body)
     .then(group => res.json(group))
-    .catch(error=>{});
+      .catch(error => res.json({ error: 'insert error', msg: error }));
 })
 
 router.get('/list', function (req, res, next) {
   Member.findAll()
     .then(members => res.json(members))
-    .catch(error=>{});
+      .catch(error => res.json({ error: 'fetch error', msg: error }));
 });
 
 router.get('/id/:id/', function (req, res, next) {
@@ -19,7 +19,7 @@ router.get('/id/:id/', function (req, res, next) {
     .then(function (member) {
       res.json(member);
     })
-    .catch(error=>{});
+      .catch(error => res.json({ error: 'fetch error', msg: error }));
 });
 
 router.patch('/id/:id', (req, res) => {
@@ -32,7 +32,7 @@ router.patch('/id/:id', (req, res) => {
                 member[keys[i]] = body[keys[i]];
             }
             member.save();
-            res.json({ error: 'Member updated successfully', msg: 'ok' })
+            res.json(member);
         }).catch(error => res.json({ error: 'update error', msg: error }));
 });
 

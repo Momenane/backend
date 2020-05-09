@@ -62,7 +62,7 @@ router.patch('/id/:id', (req, res) => {
           user[keys[i]] = body[keys[i]];
         }
         user.save();
-        res.json({ error: 'plan updated successfully', msg: 'ok' })
+        res.json(user)
       }).catch(error => res.json({ error: 'update error', msg: error }));
 });
 
