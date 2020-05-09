@@ -2,6 +2,6 @@
 
 ```bash
 npm install
-npm install --dev sqlite3 # for develop
-npm start
+npm install --dev sqlite3 nodemon # for develop
+npm run devstart
 ```
