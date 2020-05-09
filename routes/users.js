@@ -56,6 +56,19 @@ router.patch('/id/:id', (req, res) => {
 });
 
 router.delete('/id/:id', (req, res) => {
+  let userId = req.params.id;
+  console.log('get user by id ', req.session, userId);
+  if (req.session.passport == null)
+    return res.redirect('/login');
+  let user = req.session.passport.user || { id: -1, role: 'None' };
+  if (req.session && user &&
+      (userId == user.id || user.role == 'Admin'))
+    User.destroy({ where: { id: userId } })
+        .then(result => res.json({ error: 'user deleted successfully', msg: 'ok' }))
+        .catch(error => res.json({ error: 'fetch error', msg: error }));
+  else
+    res.json({ error: 'Permission Denied' });
+
 });
 
 module.exports = router;

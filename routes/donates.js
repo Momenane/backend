@@ -25,6 +25,10 @@ router.patch('/id/:id', (req, res) => {
 });
 
 router.delete('/id/:id', (req, res) => {
+  let donateId = req.params.id
+  DonateHistory.destroy({ where: { id: donateId } })
+      .then(result => res.json({ error: 'Donate History deleted successfully', msg: 'ok' }))
+      .catch(error => res.json({ error: 'fetch error', msg: error }));
 });
 
 module.exports = router;

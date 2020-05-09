@@ -22,9 +22,15 @@ router.get('/id/:id/', function (req, res, next) {
 });
 
 router.patch('/id/:id', (req, res) => {
+
+
 });
 
 router.delete('/id/:id', (req, res) => {
+  let GroupId = req.params.id
+  GroupPlans.destroy({ where: { id: GroupId } })
+      .then(result => res.json({ error: 'Group plan deleted successfully', msg: 'ok' }))
+      .catch(error => res.json({ error: 'fetch error', msg: error }));
 });
 
 module.exports = router;

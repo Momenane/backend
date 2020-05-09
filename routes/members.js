@@ -26,6 +26,10 @@ router.patch('/id/:id', (req, res) => {
 });
 
 router.delete('/id/:id', (req, res) => {
+    let memberId = req.params.id
+    Member.destroy({ where: { id: memberId } })
+        .then(result => res.json({ error: 'Member deleted successfully', msg: 'ok' }))
+        .catch(error => res.json({ error: 'fetch error', msg: error }));
 });
 
 module.exports = router;
