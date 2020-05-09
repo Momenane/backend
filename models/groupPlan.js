@@ -16,7 +16,7 @@ class GroupPlan extends Model {
     }
 
     static associate(models) {
-        this.hasMany(models.donateHistory , {foreignKey : 'plan_id'});
+        this.hasMany(models.DonateHistory , {foreignKey : 'plan_id'});
     }
 }
 

@@ -2,8 +2,13 @@
 
 const { Model, DataTypes } = require("sequelize");
 const crypto = require('crypto');
+const permission = require('./permission');
 
 // change acording to https://codewithhugo.com/using-es6-classes-for-sequelize-4-models/
+
+const PermissionEnum = DataTypes.ENUM([
+  Object.values(permission)
+]);
 
 class User extends Model {
   static init(sequelize) {
@@ -11,11 +16,11 @@ class User extends Model {
       username: { type: DataTypes.STRING, unique: true, allowNull: false },
       name: { type: DataTypes.STRING, allowNull: false },
       surname: { type: DataTypes.STRING, allowNull: false },
-      email: { type: DataTypes.STRING, validate: { isEmail: true } },
-      role: {type: DataTypes.INTEGER, allowNull: false},
-      password: {type: DataTypes.STRING, allowNull: false},
-      salt: {type: DataTypes.STRING, allowNull: false},
-      tel: DataTypes.STRING
+      password: { type: DataTypes.STRING, allowNull: false },
+      salt: { type: DataTypes.STRING, allowNull: false },
+      role: { type: PermissionEnum, allowNull: false },
+      email: { type: DataTypes.STRING, unique: true, allowNull: false, validate: { isEmail: true } },
+      tel: { type: DataTypes.STRING, validate: { is: /^[0-9\+,-]+$/ } }
     }, { sequelize });
   }
   static associate(models) {
@@ -38,6 +43,28 @@ class User extends Model {
     const sha256 = crypto.createHmac('sha256', this.salt);
     const hash = sha256.update(password).digest('base64');
     this.password = hash;
+  }
+  static passportSerialize(user, done) {
+    done(null,{ id:user.id, role: user.role });
+  }
+  static passportDeserialize(userInfo, done) {
+    User.findOne({ where: { id:userInfo.id } })
+      .then(user => done(null, user))
+      .catch(err => done(err, null));
+  }
+  static passportLogin(username, password, done) {
+    User.findOne({
+      attributes: ['id', 'role', 'password', 'salt'],
+      where: { username }
+    }).then((user) => {
+      if (user != null) {//&& user instanceof User
+        var res = user.validPassword(password);
+        if (!res)
+          return done(null, false, { message: 'Incorrect password.' });
+        return done(null, user);
+      }
+      else { return done('error'); }
+    }).catch(() => done(null, false, { message: 'Incorrect username.' }));
   }
 }
 module.exports = User;

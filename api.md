@@ -1,15 +1,10 @@
-<html>
+# Backend API
 
-<head>
-  <title>مؤمنانه</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+## API template
 
-<body>
-  <h1>طرح کمک مؤمنانه</h1>
-  <h2>api template</h2>
-  <p>all available api:</p>
-  <pre>
+all available API:
+
+```js
 {
   '/user',
   '/group',
@@ -23,9 +18,11 @@
   patch: '/id/:id',
   delete: '/id/:id'
 }
-  </pre>
-  <h3>api list:</h3>
-  <pre>
+```
+
+## API list
+
+```js
 /user/add => post
 /user/list => get
 /user/id/:id => get
@@ -55,7 +52,4 @@
 /donate/id/:id => get
 /donate/id/:id => patch
 /donate/id/:id => delete
-  </pre>
-</body>
-
-</html>
+```

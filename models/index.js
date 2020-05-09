@@ -16,7 +16,7 @@ const models = {
   Group: require('./group'),
   GroupMembers: require('./groupMembers'),
   GroupPlans : require('./groupPlan'),
-  donateHistory : require('./donateHistory'),
+  DonateHistory : require('./donateHistory'),
 };
 
 Object.values(models)

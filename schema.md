@@ -2,6 +2,8 @@
 
 ## Organization
 
+Known as `Group` in db.
+
 * id
 * name
 * location
@@ -27,6 +29,8 @@
 
 ## Org-Users
 
+Known as `User` in db.
+
 * id
 * name {first, last}
 * national code
@@ -34,19 +38,21 @@
 * tel
 * permission (admin|editor|register|reporter)
 
-## Consumer-Users
+## Indigent-Users
+
+Known as `GroupMember` in db.
 
 * id
 * [name](first and last)
 * age (سن)
 * sex (جنسیت)
 * national code (کد ملی)
-* location or region 
-* وضعیت تأهل
-* وضعیت مسکن
-* سرپرست خانواده
+* location or region
+* marital status وضعیت تأهل
+* have house وضعیت مسکن
+* Households سرپرست خانواده
 * job شغل
-* earning (درآمد)
+* monthly salary (درآمد)
 * list of family member + age
 * access way (tel, email)
 * other org membership (شماره‌ی کمیته‌ی امداد، بهزیستی و ...)
@@ -56,6 +62,8 @@
 * under support of organization(s)
 
 ## Org-Plan
+
+Known as `GroupPlan` in db.
 
 * id
 * name
@@ -67,6 +75,8 @@
 * [documentaion (مستندات)]
 
 ## Org-Plan-History
+
+Known as `DonateHistory` in db.
 
 * id
 * Con-User->id
