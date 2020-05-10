@@ -5,7 +5,7 @@ var router = express.Router();
 router.post('/add', (req, res) => {
     Group.create(req.body)
         .then(group => res.json(group))
-        .catch(error => res.json({error: 'insert error', msg: error}));
+        .catch(error => res.status(400).json({error: 'insert error', msg: error}));
 })
 
 router.get('/list', function (req, res) {

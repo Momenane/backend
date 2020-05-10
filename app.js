@@ -26,6 +26,10 @@ var app = express();
 app.use(helmet());
 app.use(cors());
 app.use(logger('dev'));
+app.use(function(req, res, next){
+  console.log(req.headers, req.body);
+  next();
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
