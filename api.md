@@ -6,47 +6,102 @@ all available API:
 
 ```js
 {
-  '/user',
-  '/group',
-  '/member',
-  '/plan',
-  '/donate'
-} + {
-  post: '/add',
-  get: '/list',
-  get: '/id/:id',
-  patch: '/id/:id',
-  delete: '/id/:id'
+  "/user", "/group", "/member", "/plan", "/donate"
 }
++{
+  post: "/add",
+  get: "/list",
+  get: "/id/:id",
+  patch: "/id/:id",
+  delete: "/id/:id",
+};
 ```
 
 ## API list
 
 ```js
+user = {
+  username: { type: STRING, unique: true, allowNull: false },
+  name: { type: STRING, allowNull: false },
+  surname: { type: STRING, allowNull: false },
+  password: { type: STRING, allowNull: false },
+  role: { type: {'GAdmin','GEditor','GReporter'}, allowNull: false },
+  email: { type: STRING, unique: true, allowNull: false, validate: { isEmail: true } },
+  tel: { type: STRING, validate: { is: /^[0-9\+,-]+$/ } }
+};
 /user/add => post
 /user/list => get
 /user/id/:id => get
 /user/id/:id => patch
 /user/id/:id => delete
 
+group = {
+  name: { type: STRING, allowNull: false },
+  head_id: INTEGER,
+  location: STRING,
+  address: { type: STRING, allowNull: false },
+  site: { type: STRING, validate: { isUrl: true } },
+  email: { type: STRING, validate: { isEmail: true } },
+  tel: { type: STRING, validate: { is: /^[0-9\+,-]+$/ } },
+  social_link: STRING, // string list
+  register_number: STRING,
+  target_region: STRING,
+  image: STRING,
+};
 /group/add => post
 /group/list => get
 /group/id/:id => get
 /group/id/:id => patch
 /group/id/:id => delete
 
+member = {
+  name: { type: STRING, allowNull: false },
+  surname: { type: STRING, allowNull: false },
+  birth_date: STRING,
+  sex: { type: SexEnum, allowNull: false, defaultValue: 'None' },
+  national_code: { type: STRING, allowNull: false, is: /^[0-9]+$/ },
+  marital: { type: MaritalStatus, allowNull: false, defaultValue: 'None' },
+  is_households: { type: BOOLEAN, allowNull: false },
+  family_parent_id: { type: INTEGER, allowNull: false, defaultValue: -1 },
+  family_names: STRING,
+  tels: { type: STRING, allowNull: false, is: /^[0-9\+-,]+$/ }, // comma seprated
+  email: { type: STRING, validate: { isEmail: true } },
+  city_area: { type: INTEGER, allowNull: false },
+  address: { type: TEXT, allowNull: false },
+  have_house: { type: BOOLEAN, allowNull: false },
+  job: { type: STRING, allowNull: true },
+  monthly_salary: BIGINT, // in Rial or local 
+  group_id: { type: INTEGER, allowNull: false },
+  register_id: { type: INTEGER, allowNull: false },
+  other_organization: STRING,
+}
 /member/add => post
 /member/list => get
 /member/id/:id => get
 /member/id/:id => patch
 /member/id/:id => delete
 
+plan = {
+  name: { type: STRING, allowNull: false },
+  type: { type: STRING, allowNull: false },
+  donation: { type: STRING, allowNull: false },
+  total: { type: STRING, allowNull: false },
+  amount: { type: INTEGER, allowNull: false },
+  notes: TEXT,
+  document: TEXT,
+};
 /plan/add => post
 /plan/list => get
 /plan/id/:id => get
 /plan/id/:id => patch
 /plan/id/:id => delete
 
+donate = {
+  member_id: { type: INTEGER, allowNull: false },
+  plan_id: { type: INTEGER, allowNull: false },
+  amount: { type: INTEGER, allowNull: false },
+  date: { type: DATE, allowNull: false }
+};
 /donate/add => post
 /donate/list => get
 /donate/id/:id => get
