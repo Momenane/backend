@@ -10,8 +10,8 @@ router.post('/add', (req, res) => {
   req.body.salt = User.newSalt();
   req.body.password = User.getStorePassword(req.body.password, req.body.salt);
   User.create(req.body)
-    .then(user => res.json(user))
-    .catch(error => res.json({ error: 'insert error', msg: error }));
+    .then(user => res.status(201).json(user))
+    .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
 });
 
 /* GET users listing. */
@@ -27,14 +27,14 @@ router.get('/list', (req, res) => {
     if (req.body.limit && req.body.offset)
       User.findAll({ limit, offset })
         .then(users => res.json({ rows: users }))
-        .catch(error => res.json({ error: 'fetch error', msg: error }));
+        .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
     else
       User.findAndCountAll({ limit, offset })
         .then(users => res.json(users))
-        .catch(error => res.json({ error: 'fetch error', msg: error }));
+        .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
   }
   else
-    res.json({ error: 'Permission Denied' });
+    res.status(401).json({ error: 'Permission Denied' });
 });
 
 router.get('/id/:id', (req, res) => {
@@ -47,23 +47,23 @@ router.get('/id/:id', (req, res) => {
     (userId == user.id || user.role == 'Admin'))
     User.findOne({ where: { id: userId } })
       .then(user => res.json(user))
-      .catch(error => res.json({ error: 'fetch error', msg: error }));
+      .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
   else
-    res.json({ error: 'Permission Denied' });
+    res.status(401).json({ error: 'Permission Denied' });
 });
 
 router.patch('/id/:id', (req, res) => {
   let userId = req.params.id
   User.findByPk(userId).then(
-      (user) => {
-        var body = req.body;
-        var keys = body.keys();
-        for (let i= 0;req.body.length ; i++){
-          user[keys[i]] = body[keys[i]];
-        }
-        user.save();
-        res.json(user)
-      }).catch(error => res.json({ error: 'update error', msg: error }));
+    (user) => {
+      var body = req.body;
+      var keys = body.keys();
+      for (let i = 0; req.body.length; i++) {
+        user[keys[i]] = body[keys[i]];
+      }
+      user.save();
+      res.json(user)
+    }).catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {
@@ -73,12 +73,12 @@ router.delete('/id/:id', (req, res) => {
     return res.redirect('/login');
   let user = req.session.passport.user || { id: -1, role: 'None' };
   if (req.session && user &&
-      (userId == user.id || user.role == 'Admin'))
+    (userId == user.id || user.role == 'Admin'))
     User.destroy({ where: { id: userId } })
-        .then(result => res.json({ error: 'user deleted successfully', msg: 'ok' }))
-        .catch(error => res.json({ error: 'fetch error', msg: error }));
+      .then(result => res.json({ info: 'user deleted successfully', msg: 'ok' }))
+      .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
   else
-    res.json({ error: 'Permission Denied' });
+    res.status(401).json({ error: 'Permission Denied' });
 
 });
 
