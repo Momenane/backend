@@ -1,7 +1,8 @@
 module.exports = {
   development: {
     dialect: "sqlite",
-    storage: "./db.development.sqlite"
+    storage: "./db.development.sqlite",
+    logging: false
   },
   test: {
     dialect: "sqlite",
@@ -13,6 +14,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOSTNAME,
     dialect: 'mysql',
-    use_env_variable: 'DATABASE_URL'
+    use_env_variable: 'DATABASE_URL',
+    logging: false
   }
 };
