@@ -61,17 +61,17 @@ app.use('/plan', planRouter);
 // { successRedirect: '/' }
 app.post('/login',
   passport.authenticate('local', { failureRedirect: '/error' }),
-  (req, res) => {
-    // res.json(req.user);
-    res.redirect('/user/get/' + req.user.id);
-  }
+  (req, res) => res.redirect('/user/id/' + req.user.id)
 );
 
 app.get('/logout', (req, res) => {
-  req.logout();
-  req.session.destroy();
-  // res.redirect('/');
-  res.json({ "logout": "ok" });
+  if (req.user) {
+    req.logout();
+    req.session.destroy();
+    res.json({ logout: "ok" });
+  }
+  else
+    res.status(401).json({ msg: "login first" });
 });
 
 // passport config
