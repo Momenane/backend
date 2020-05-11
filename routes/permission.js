@@ -7,7 +7,7 @@ function roleChecker(role, redirect = '/login') {
       else
         res.status(401).redirect(redirect);
     };
-  return function (req, res, next) {
+  return (req, res, next) => {
     if (req.user && req.user.role === role)
       next();
     else
@@ -25,7 +25,7 @@ function roleOrUserIdChecker(role, redirect = '/login') {
       else
         res.status(401).redirect(redirect);
     };
-  return function (req, res, next) {
+  return (req, res, next) => {
     if (req.user && req.user.role === role)
       next();
     else

@@ -30,7 +30,7 @@ user = {
   tel: { type: STRING, validate: { is: /^[0-9\+,-]+$/ } }
 };
 /user/add => post
-/user/list => get
+/user/list?offset=X&limit=Y => get
 /user/id/:id => get
 /user/id/:id => patch
 /user/id/:id => delete
@@ -49,7 +49,7 @@ group = {
   image: STRING,
 };
 /group/add => post
-/group/list => get
+/group/list?offset=X&limit=Y => get
 /group/id/:id => get
 /group/id/:id => patch
 /group/id/:id => delete
@@ -76,7 +76,7 @@ member = {
   other_organization: STRING,
 }
 /member/add => post
-/member/list => get
+/member/list?offset=X&limit=Y => get
 /member/id/:id => get
 /member/id/:id => patch
 /member/id/:id => delete
@@ -91,7 +91,7 @@ plan = {
   document: TEXT,
 };
 /plan/add => post
-/plan/list => get
+/plan/list?offset=X&limit=Y => get
 /plan/id/:id => get
 /plan/id/:id => patch
 /plan/id/:id => delete
@@ -103,7 +103,7 @@ donate = {
   date: { type: DATE, allowNull: false }
 };
 /donate/add => post
-/donate/list => get
+/donate/list?offset=X&limit=Y => get
 /donate/id/:id => get
 /donate/id/:id => patch
 /donate/id/:id => delete

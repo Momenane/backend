@@ -1,8 +1,7 @@
 var User = require('../models').User;
+var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
-var roleChecker = require('./permission');
-const { check, validationResult } = require('express-validator');
 
 // todo: use require('express-validator');
 
@@ -18,11 +17,11 @@ router.post('/add', (req, res) => {
 
 /* GET users listing. */
 router.get('/list', roleChecker('Admin'), (req, res) => {
-  let limit = req.body.limit || 10;
-  let offset = req.body.offset || 0;
-  if (req.body.limit && req.body.offset)
+  let limit = req.params.limit || 10;
+  let offset = req.params.offset || 0;
+  if (req.query.limit && req.query.offset)
     User.findAll({ limit, offset })
-      .then(users => res.json({ rows: users }))
+      .then(rows => res.json({ rows }))
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
   else
     User.findAndCountAll({ limit, offset })
