@@ -70,6 +70,7 @@ app.post('/login',
 app.get('/logout', (req, res) => {
   req.logout();
   req.session.destroy();
+  // res.redirect('/');
   res.json({ "logout": "ok" });
 });
 

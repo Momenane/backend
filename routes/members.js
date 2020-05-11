@@ -16,16 +16,14 @@ router.get('/list', function (req, res, next) {
 
 router.get('/id/:id/', function (req, res, next) {
   Member.findByPk(req.params.id, { include: ['Group'] })
-    .then(function (member) {
-      res.json(member);
-    })
+    .then(member => res.json(member))
     .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
 router.patch('/id/:id', (req, res) => {
   let memberId = req.params.id
-  Member.findByPk(memberId).then(
-    (member) => {
+  Member.findByPk(memberId)
+    .then(member => {
       var body = req.body;
       var keys = body.keys();
       for (let i = 0; req.body.length; i++) {
@@ -33,7 +31,8 @@ router.patch('/id/:id', (req, res) => {
       }
       member.save();
       res.json(member);
-    }).catch(error => res.status(400).json({ error: 'update error', msg: error }));
+    })
+    .catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {

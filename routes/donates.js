@@ -23,16 +23,17 @@ router.get('/id/:id/', function (req, res, next) {
 
 router.patch('/id/:id', (req, res) => {
   let doanteId = req.params.id
-  DonateHistory.findByPk(doanteId).then(
-    (donate) => {
+  DonateHistory.findByPk(doanteId)
+    .then(donate => {
       var body = req.body;
       var keys = body.keys();
       for (let i = 0; req.body.length; i++) {
         donate[keys[i]] = body[keys[i]];
       }
       donate.save();
-      res.json(donate)
-    }).catch(error => res.status(400).json({ error: 'update error', msg: error }));
+      res.json(donate);
+    })
+    .catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {

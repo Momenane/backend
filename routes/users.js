@@ -54,8 +54,8 @@ router.get('/id/:id', (req, res) => {
 
 router.patch('/id/:id', (req, res) => {
   let userId = req.params.id
-  User.findByPk(userId).then(
-    (user) => {
+  User.findByPk(userId)
+    .then(user => {
       var body = req.body;
       var keys = body.keys();
       for (let i = 0; req.body.length; i++) {
@@ -63,7 +63,8 @@ router.patch('/id/:id', (req, res) => {
       }
       user.save();
       res.json(user)
-    }).catch(error => res.status(400).json({ error: 'update error', msg: error }));
+    })
+    .catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {

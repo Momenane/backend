@@ -25,8 +25,8 @@ router.get('/id/:id/', function (req, res) {
 
 router.patch('/id/:id', (req, res) => {
   let groupId = req.params.id
-  Group.findByPk(groupId).then(
-    (group) => {
+  Group.findByPk(groupId)
+    .then(group => {
       var body = req.body;
       var keys = body.keys();
       for (let i = 0; req.body.length; i++) {
@@ -34,7 +34,8 @@ router.patch('/id/:id', (req, res) => {
       }
       group.save();
       res.json(group)
-    }).catch(error => res.status(400).json({ error: 'update error', msg: error }));
+    })
+    .catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
 
 router.delete('/id/:id', (req, res) => {
