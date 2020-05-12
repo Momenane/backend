@@ -1,10 +1,12 @@
-var Member = require('../models').GroupMembers;
+var Member = require('../models').GroupMember;
 var { ViewPermission, EditPermission } = require('../models/permission');
 var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
 
 router.post('/add', roleChecker(EditPermission), (req, res) => {
+  req.body.register_id = req.user.id;
+  req.body.group_id = req.user.group_id;
   Member.create(req.body)
     .then(group => res.status(201).json(group))
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
@@ -13,6 +15,7 @@ router.post('/add', roleChecker(EditPermission), (req, res) => {
 router.get('/list', roleChecker(ViewPermission), (req, res) => {
   let limit = req.query.limit || 10;
   let offset = req.query.offset || 0;
+  // todo: limit get user by group_id from user
   if (req.query.limit && req.query.offset)
     Member.findAll({ limit, offset })
       .then(rows => res.json({ rows }))

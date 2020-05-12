@@ -19,8 +19,10 @@ class Group extends Model {
     }, { sequelize });
   }
   static associate(models) {
-    this.hasMany(models.GroupMembers, { foreignKey: 'group_id' });
-    this.belongsTo(models.User);
+    this.hasMany(models.GroupMember, { foreignKey: 'group_id' });
+    this.hasMany(models.GroupPlan, { foreignKey: 'group_id' });
+    this.hasMany(models.User, { foreignKey: 'group_id', constraints: false, allowNull: true, defaultValue: null });
+    // this.belongsTo(models.User);
   }
 }
 

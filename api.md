@@ -48,7 +48,7 @@ group = {
   target_region: STRING,
   image: STRING,
 };
-/group/add => post
+/group/add => post // set head_id from session data and set user.group_id after insert
 /group/list?offset=X&limit=Y => get
 /group/id/:id => get
 /group/id/:id => patch
@@ -59,23 +59,23 @@ member = {
   surname: { type: STRING, allowNull: false },
   birth_date: STRING,
   sex: { type: SexEnum, allowNull: false, defaultValue: 'None' },
-  national_code: { type: STRING, allowNull: false, is: /^[0-9]+$/ },
+  national_code: { type: STRING, unique:true, allowNull: false, is: /^[0-9]+$/ },
   marital: { type: MaritalStatus, allowNull: false, defaultValue: 'None' },
   is_households: { type: BOOLEAN, allowNull: false },
   family_parent_id: { type: INTEGER, allowNull: false, defaultValue: -1 },
   family_names: STRING,
-  tels: { type: STRING, allowNull: false, is: /^[0-9\+-,]+$/ }, // comma seprated
+  tels: { type: STRING,  is: /^[0-9\+-,]+$/ }, // comma seprated
   email: { type: STRING, validate: { isEmail: true } },
-  city_area: { type: INTEGER, allowNull: false },
+  location: DataTypes.STRING,
   address: { type: TEXT, allowNull: false },
   have_house: { type: BOOLEAN, allowNull: false },
-  job: { type: STRING, allowNull: true },
+  job: DataTypes.STRING,
   monthly_salary: BIGINT, // in Rial or local 
   group_id: { type: INTEGER, allowNull: false },
   register_id: { type: INTEGER, allowNull: false },
   other_organization: STRING,
 }
-/member/add => post
+/member/add => post // set register_id and group_id from user data in session
 /member/list?offset=X&limit=Y => get
 /member/id/:id => get
 /member/id/:id => patch
@@ -85,12 +85,12 @@ plan = {
   name: { type: STRING, allowNull: false },
   type: { type: STRING, allowNull: false },
   donation: { type: STRING, allowNull: false },
-  total: { type: STRING, allowNull: false },
+  target: { type: STRING, allowNull: false }, // region
   amount: { type: INTEGER, allowNull: false },
   notes: TEXT,
   document: TEXT,
 };
-/plan/add => post
+/plan/add => post // set group_id from session.user.group_id
 /plan/list?offset=X&limit=Y => get
 /plan/id/:id => get
 /plan/id/:id => patch
@@ -102,7 +102,7 @@ donate = {
   amount: { type: INTEGER, allowNull: false },
   date: { type: DATE, allowNull: false }
 };
-/donate/add => post
+/donate/add => post // set group_id from session.user.group_id
 /donate/list?offset=X&limit=Y => get
 /donate/id/:id => get
 /donate/id/:id => patch

@@ -4,6 +4,7 @@ var express = require('express');
 var router = express.Router();
 
 // todo: use require('express-validator');
+// var nodemailer = require("nodemailer");
 
 router.post('/add', (req, res) => {
   // check for input data and validate constraint

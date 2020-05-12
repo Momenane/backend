@@ -12,8 +12,8 @@ class DonateHistory extends Model {
     }, { sequelize });
   }
   static associate(models) {
-    this.belongsTo(models.GroupMembers);
-    this.belongsTo(models.GroupPlans);
+    this.belongsTo(models.GroupMember, { foreignKey: 'member_id' });
+    this.belongsTo(models.GroupPlan, { foreignKey: 'plan_id' });
   }
 }
 

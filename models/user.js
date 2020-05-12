@@ -24,7 +24,8 @@ class User extends Model {
     }, { sequelize });
   }
   static associate(models) {
-    this.hasOne(models.Group, { foreignKey: 'head_id' });
+    // this.hasOne(models.Group, { foreignKey: 'head_id' });
+    this.belongsTo(models.Group, { foreignKey: 'group_id' });
   }
   static newSalt() {
     return crypto.randomBytes(16).toString('base64');
@@ -45,16 +46,16 @@ class User extends Model {
     this.password = hash;
   }
   static passportSerialize(user, done) {
-    done(null,{ id:user.id, role: user.role });
+    done(null, { id: user.id, role: user.role });
   }
   static passportDeserialize(userInfo, done) {
-    User.findOne({ where: { id:userInfo.id } })
+    User.findOne({ where: { id: userInfo.id } })
       .then(user => done(null, user))
       .catch(err => done(err, null));
   }
   static passportLogin(username, password, done) {
     User.findOne({
-      attributes: ['id', 'role', 'password', 'salt'],
+      attributes: ['id', 'role', 'password', 'salt', 'group_id'],
       where: { username }
     }).then((user) => {
       if (user != null) {//&& user instanceof User

@@ -1,12 +1,18 @@
-var Group = require('../models').Group;
+var { User, Group } = require('../models');
 var { ViewPermission, EditPermission } = require('../models/permission');
 var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
 
 router.post('/add', roleChecker(EditPermission), (req, res) => {
+  req.body.head_id = req.user.id;
   Group.create(req.body)
-    .then(group => res.status(201).json(group))
+    .then(group => {
+      User.findByPk(req.user.id)
+        .then(user => { user.group_id = group.id; user.save(); })
+        .catch(error => {/*todo*/});
+      res.status(201).json(group);
+    })
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
 });
 

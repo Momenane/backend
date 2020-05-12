@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 router.post('/add', roleChecker(EditPermission), (req, res) => {
+  req.body.group_id = req.user.group_id;
   Donate.create(req.body)
     .then(donate => res.status(201).json(donate))
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));

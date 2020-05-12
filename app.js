@@ -39,8 +39,8 @@ app.use(session({
 app.use(bodyParser.json())
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(upload.array());
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', '/assets/favicon/favicon.ico')))
 app.use(passport.initialize());
 app.use(passport.session());
 

@@ -1,10 +1,11 @@
-var Plan = require('../models').GroupPlans;
+var Plan = require('../models').GroupPlan;
 var { ViewPermission, EditPermission } = require('../models/permission');
 var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
 
 router.post('/add', roleChecker(EditPermission), (req, res) => {
+  req.body.group_id = req.user.id;
   Plan.create(req.body)
     .then(plan => res.status(201).json(plan))
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
