@@ -1,7 +1,6 @@
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
 var session = require('express-session');
 var cors = require('cors');
 var rateLimit = require("express-rate-limit");
@@ -27,6 +26,7 @@ app.use(helmet());
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
+app.use(express.json({ type: 'application/vnd.api+json' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
@@ -36,11 +36,9 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false, maxAge: 3600000 } // todo: replace in production
 }));
-app.use(bodyParser.json())
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(upload.array());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', '/assets/favicon/favicon.ico')))
+// app.use(favicon(path.join(__dirname, 'public', '/assets/favicon/favicon.ico')));
 app.use(passport.initialize());
 app.use(passport.session());
 
