@@ -18,6 +18,7 @@ class GroupMember extends Model {
       is_households: { type: DataTypes.BOOLEAN, allowNull: false },
       family_parent_id: { type: DataTypes.INTEGER, allowNull: false, defaultValue: -1 },
       family_names: DataTypes.STRING,
+      family_count: DataTypes.INTEGER,
       tels: { type: DataTypes.STRING, is: /^[0-9\+-,]+$/ }, // comma seprated
       email: { type: DataTypes.STRING, validate: { isEmail: true } },
       location: DataTypes.STRING,
