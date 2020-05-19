@@ -11,7 +11,7 @@ class Group extends Model {
       address: { type: DataTypes.STRING, allowNull: false },
       site: { type: DataTypes.STRING, validate: { isUrl: true } },
       email: { type: DataTypes.STRING, validate: { isEmail: true } },
-      tel: { type: DataTypes.STRING, validate: { is: /^[0-9\+,-]+$/ } },
+      tel: { type: DataTypes.STRING, allowNull: false, validate: { is: /^[0-9\+,-]+$/ } },
       social_link: DataTypes.STRING, // string list
       register_number: DataTypes.STRING,
       target_region: DataTypes.STRING,
