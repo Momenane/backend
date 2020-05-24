@@ -6,7 +6,7 @@ all available API:
 
 ```js
 {
-  "/user", "/group", "/member", "/plan", "/donate"
+  "/user", "/group", "/member", "/plan", "/donate";
 }
 +{
   post: "/add",
@@ -22,8 +22,8 @@ all available API:
 ```js
 user = {
   username: { type: STRING, unique: true, allowNull: false },
-  name: { type: STRING, allowNull: false },
-  surname: { type: STRING, allowNull: false },
+  firstName: { type: STRING, allowNull: false },
+  lastName: { type: STRING, allowNull: false },
   password: { type: STRING, allowNull: false },
   role: { type: {'GAdmin','GEditor','GReporter'}, allowNull: false },
   email: { type: STRING, unique: true, allowNull: false, validate: { isEmail: true } },
@@ -55,8 +55,8 @@ group = {
 /group/id/:id => delete
 
 member = {
-  name: { type: STRING, allowNull: false },
-  surname: { type: STRING, allowNull: false },
+  firstName: { type: STRING, allowNull: false },
+  lastName: { type: STRING, allowNull: false },
   birth_date: STRING,
   sex: { type: SexEnum, allowNull: false, defaultValue: 'None' },
   national_code: { type: STRING, unique:true, allowNull: false, is: /^[0-9]+$/ },
@@ -70,7 +70,7 @@ member = {
   address: { type: TEXT, allowNull: false },
   have_house: { type: BOOLEAN, allowNull: false },
   job: DataTypes.STRING,
-  monthly_salary: BIGINT, // in Rial or local 
+  monthly_salary: BIGINT, // in Rial or local
   group_id: { type: INTEGER, allowNull: false },
   register_id: { type: INTEGER, allowNull: false },
   other_organization: STRING,

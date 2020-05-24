@@ -1,8 +1,3569 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
 }
 
-a {
-  color: #00B7FF;
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+.svg-inline--fa.s-lg {
+  vertical-align: -0.225em;
+}
+
+.svg-inline--fa.s-w-1 {
+  width: 0.0625em;
+}
+
+.svg-inline--fa.s-w-2 {
+  width: 0.125em;
+}
+
+.svg-inline--fa.s-w-3 {
+  width: 0.1875em;
+}
+
+.svg-inline--fa.s-w-4 {
+  width: 0.25em;
+}
+
+.svg-inline--fa.s-w-5 {
+  width: 0.3125em;
+}
+
+.svg-inline--fa.s-w-6 {
+  width: 0.375em;
+}
+
+.svg-inline--fa.s-w-7 {
+  width: 0.4375em;
+}
+
+.svg-inline--fa.s-w-8 {
+  width: 0.5em;
+}
+
+.svg-inline--fa.s-w-9 {
+  width: 0.5625em;
+}
+
+.svg-inline--fa.s-w-10 {
+  width: 0.625em;
+}
+
+.svg-inline--fa.s-w-11 {
+  width: 0.6875em;
+}
+
+.svg-inline--fa.s-w-12 {
+  width: 0.75em;
+}
+
+.svg-inline--fa.s-w-13 {
+  width: 0.8125em;
+}
+
+.svg-inline--fa.s-w-14 {
+  width: 0.875em;
+}
+
+.svg-inline--fa.s-w-15 {
+  width: 0.9375em;
+}
+
+.svg-inline--fa.s-w-16 {
+  width: 1em;
+}
+
+.svg-inline--fa.s-w-17 {
+  width: 1.0625em;
+}
+
+.svg-inline--fa.s-w-18 {
+  width: 1.125em;
+}
+
+.svg-inline--fa.s-w-19 {
+  width: 1.1875em;
+}
+
+.svg-inline--fa.s-w-20 {
+  width: 1.25em;
+}
+
+.svg-inline--fa.s-pull-left {
+  margin-right: 0.3em;
+  width: auto;
+}
+
+.svg-inline--fa.s-pull-right {
+  margin-left: 0.3em;
+  width: auto;
+}
+
+.svg-inline--fa.s-border {
+  height: 1.5em;
+}
+
+.svg-inline--fa.s-li {
+  width: 2em;
+}
+
+.svg-inline--fa.s-fw {
+  width: 1.25em;
+}
+
+.s-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.s-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+
+.s-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.s-layers-counter,
+.s-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.s-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.s-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: 0.25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+  transform: scale(0.25);
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
+}
+
+.s-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+  transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+  transform-origin: bottom right;
+}
+
+.s-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+  transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
+.s-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+  transform: scale(0.25);
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
+}
+
+.s-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+  transform: scale(0.25);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.s-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.s-xs {
+  font-size: 0.75em;
+}
+
+.s-sm {
+  font-size: 0.875em;
+}
+
+.s-1x {
+  font-size: 1em;
+}
+
+.s-2x {
+  font-size: 2em;
+}
+
+.s-3x {
+  font-size: 3em;
+}
+
+.s-4x {
+  font-size: 4em;
+}
+
+.s-5x {
+  font-size: 5em;
+}
+
+.s-6x {
+  font-size: 6em;
+}
+
+.s-7x {
+  font-size: 7em;
+}
+
+.s-8x {
+  font-size: 8em;
+}
+
+.s-9x {
+  font-size: 9em;
+}
+
+.s-10x {
+  font-size: 10em;
+}
+
+.s-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.s-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.s-ul > li {
+  position: relative;
+}
+
+.s-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.s-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.s-pull-left {
+  float: left;
+}
+
+.s-pull-right {
+  float: right;
+}
+
+.fa.s-pull-left,
+.fas.s-pull-left,
+.far.s-pull-left,
+.fal.s-pull-left,
+.fab.s-pull-left {
+  margin-right: 0.3em;
+}
+
+.fa.s-pull-right,
+.fas.s-pull-right,
+.far.s-pull-right,
+.fal.s-pull-right,
+.fab.s-pull-right {
+  margin-left: 0.3em;
+}
+
+.s-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+.s-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.s-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.s-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.s-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.s-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.s-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.s-flip-both,
+.s-flip-horizontal.s-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+}
+
+:root .s-rotate-90,
+:root .s-rotate-180,
+:root .s-rotate-270,
+:root .s-flip-horizontal,
+:root .s-flip-vertical,
+:root .s-flip-both {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.s-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.s-stack-1x,
+.s-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg-inline--fa.s-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+
+.svg-inline--fa.s-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.s-inverse {
+  color: #fff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.svg-inline--fa .s-primary {
+  fill: var(--s-primary-color, currentColor);
+  opacity: 1;
+  opacity: var(--s-primary-opacity, 1);
+}
+
+.svg-inline--fa .s-secondary {
+  fill: var(--s-secondary-color, currentColor);
+  opacity: 0.4;
+  opacity: var(--s-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.s-swap-opacity .s-primary {
+  opacity: 0.4;
+  opacity: var(--s-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.s-swap-opacity .s-secondary {
+  opacity: 1;
+  opacity: var(--s-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .s-primary,
+.svg-inline--fa mask .s-secondary {
+  fill: black;
+}
+
+.fad.s-inverse {
+  color: #fff;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+
+ng\:form {
+  display: block;
+}
+
+.ng-animate-shim {
+  visibility: hidden;
+}
+
+.ng-anchor {
+  position: absolute;
+}
+
+.ng-cloak,
+.x-ng-cloak,
+[data-ng-cloak],
+[ng-cloak],
+[ng\:cloak],
+[x-ng-cloak] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --orange: #fcbc2b;
+  --blue: #17407a;
+  --n-gray: #666;
+  --l-silver: #e6e6e6;
+  --l-green: #7ba768;
+  --l-blue: #f6f9fc;
+  --d-gray: #333;
+  --silver: #989898;
+  --l-gray: #999;
+  --l-purple: #bdccd4;
+  --n-blue: #00a99d;
+  --m-blue: #eaeff4;
+  --l-orange: #01b1c8;
+  --red: #f44336;
+  --green: #009245;
+  --black: #000;
+  --white: #fff;
+  --sky: #e6f4ff;
+  --l-sky: #e7eff2;
+  --s-green: #ffebf1;
+  --n-green: #22b573;
+  --stone: #dee0e6;
+  --l-stone: #f2f2f2;
+  --d-blue: #083d5d;
+  --ocean-blue: #004182;
+  --makeen-blue: #478afd;
+  --material-grey: #c9d5dc;
+  --dis-silver: #a6b5be;
+  --card-blue: #72c1f5;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: iranyekan, roboto, Arial;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 500;
+  src: url("assets/fonts/iranyekanwebbold(fanum).eot");
+  src: url("assets/fonts/iranyekanwebbold(fanum).eot")
+      format("embedded-opentype"),
+    url("assets/fonts/iranyekanwebbold(fanum).woff2") format("woff2"),
+    url("assets/fonts/iranyekanwebbold(fanum).woff") format("woff"),
+    url("assets/fonts/iranyekanwebbold(fanum).ttf") format("truetype");
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url("assets/fonts/iranyekanweblight(fanum).eot");
+  src: url("assets/fonts/iranyekanweblight(fanum).eot")
+      format("embedded-opentype"),
+    url("assets/fonts/iranyekanweblight(fanum).woff2") format("woff2"),
+    url("assets/fonts/iranyekanweblight(fanum).woff") format("woff"),
+    url("assets/fonts/iranyekanweblight(fanum).ttf") format("truetype");
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/iranyekanwebregular(fanum).eot");
+  src: url("assets/fonts/iranyekanwebregular(fanum).eot")
+      format("embedded-opentype"),
+    url("assets/fonts/iranyekanwebregular(fanum).woff2") format("woff2"),
+    url("assets/fonts/iranyekanwebregular(fanum).woff") format("woff"),
+    url("assets/fonts/iranyekanwebregular(fanum).ttf") format("truetype");
+}
+
+html:lang(fa) body {
+  font-family: iranyekan, roboto, Arial;
+}
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  outline: 0;
+}
+
+.view-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.center-all,
+.star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.star i,
+.star svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+}
+
+.star i.star-filled,
+.star i.star-half,
+.star svg.star-filled,
+.star svg.star-half {
+  opacity: 0;
+}
+
+.star i {
+  top: 1px;
+  display: none;
+}
+
+.rating.star-icon i,
+.star.icon i {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.rating.star-icon i.star-empty:before,
+.star.icon i.star-empty:before {
+  content: "\2606";
+}
+
+.rating.star-icon i.star-filled:before,
+.rating.star-icon i.star-half:before,
+.star.icon i.star-filled:before,
+.star.icon i.star-half:before {
+  content: "\2605";
+}
+
+.rating.star-custom-icon i,
+.rating.theme-kununu .star-container .star i,
+.star.custom-icon i {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.rating.hover:hover.hover-1 .star-container .star i.star-filled,
+.rating.hover:hover.hover-1 .star-container .star i.star-half,
+.rating.hover:hover.hover-1 .star-container .star svg.star-filled,
+.rating.hover:hover.hover-1 .star-container .star svg.star-half,
+.rating.hover:hover.hover-2 .star-container .star i.star-filled,
+.rating.hover:hover.hover-2 .star-container .star i.star-half,
+.rating.hover:hover.hover-2 .star-container .star svg.star-filled,
+.rating.hover:hover.hover-2 .star-container .star svg.star-half,
+.rating.hover:hover.hover-3 .star-container .star i.star-filled,
+.rating.hover:hover.hover-3 .star-container .star i.star-half,
+.rating.hover:hover.hover-3 .star-container .star svg.star-filled,
+.rating.hover:hover.hover-3 .star-container .star svg.star-half,
+.rating.hover:hover.hover-4 .star-container .star i.star-filled,
+.rating.hover:hover.hover-4 .star-container .star i.star-half,
+.rating.hover:hover.hover-4 .star-container .star svg.star-filled,
+.rating.hover:hover.hover-4 .star-container .star svg.star-half,
+.rating.hover:hover.hover-5 .star-container .star i.star-filled,
+.rating.hover:hover.hover-5 .star-container .star i.star-half,
+.rating.hover:hover.hover-5 .star-container .star svg.star-filled,
+.rating.hover:hover.hover-5 .star-container .star svg.star-half,
+.rating.hover:hover.hover-6 .star-container .star i.star-filled,
+.rating.hover:hover.hover-6 .star-container .star i.star-half,
+.rating.hover:hover.hover-6 .star-container .star svg.star-filled,
+.rating.hover:hover.hover-6 .star-container .star svg.star-half,
+.rating.hover:hover.value-1.half .star-container .star i.star-filled,
+.rating.hover:hover.value-1.half .star-container .star i.star-half,
+.rating.hover:hover.value-1.half .star-container .star svg.star-filled,
+.rating.hover:hover.value-1.half .star-container .star svg.star-half,
+.rating.hover:hover.value-2.half .star-container .star i.star-filled,
+.rating.hover:hover.value-2.half .star-container .star i.star-half,
+.rating.hover:hover.value-2.half .star-container .star svg.star-filled,
+.rating.hover:hover.value-2.half .star-container .star svg.star-half,
+.rating.hover:hover.value-3.half .star-container .star i.star-filled,
+.rating.hover:hover.value-3.half .star-container .star i.star-half,
+.rating.hover:hover.value-3.half .star-container .star svg.star-filled,
+.rating.hover:hover.value-3.half .star-container .star svg.star-half,
+.rating.hover:hover.value-4.half .star-container .star i.star-filled,
+.rating.hover:hover.value-4.half .star-container .star i.star-half,
+.rating.hover:hover.value-4.half .star-container .star svg.star-filled,
+.rating.hover:hover.value-4.half .star-container .star svg.star-half,
+.rating.hover:hover.value-5.half .star-container .star i.star-filled,
+.rating.hover:hover.value-5.half .star-container .star i.star-half,
+.rating.hover:hover.value-5.half .star-container .star svg.star-filled,
+.rating.hover:hover.value-5.half .star-container .star svg.star-half,
+.rating.hover:hover.value-6.half .star-container .star i.star-filled,
+.rating.hover:hover.value-6.half .star-container .star i.star-half,
+.rating.hover:hover.value-6.half .star-container .star svg.star-filled,
+.rating.hover:hover.value-6.half .star-container .star svg.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-1:first-child
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-1:first-child
+  .star-container
+  .star
+  i.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-1:first-child
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-1:first-child
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-2:first-child
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-2:first-child
+  .star-container
+  .star
+  i.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-2:first-child
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-2:first-child
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-3:first-child
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-3:first-child
+  .star-container
+  .star
+  i.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-3:first-child
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-3:first-child
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-4:first-child
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-4:first-child
+  .star-container
+  .star
+  i.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-4:first-child
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-4:first-child
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-5:first-child
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-5:first-child
+  .star-container
+  .star
+  i.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-5:first-child
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-5:first-child
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-6:first-child
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-6:first-child
+  .star-container
+  .star
+  i.star-half,
+.rating.value-0.half
+  .rating.hover.star:hover.value-6:first-child
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-0.half
+  .rating.hover.star:hover.value-6:first-child
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(2)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(2)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(2)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(2)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(2)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(2)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(2)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(2)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(2)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(2)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(2)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(2)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(2)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(2)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(2)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(2)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(2)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(2)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(2)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(2)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(2)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(2)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(2)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(2)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(3)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(3)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(3)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(3)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(3)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(3)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(3)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(3)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(3)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(3)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(3)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(3)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(3)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(3)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(3)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(3)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(3)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(3)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(3)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(3)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(3)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(3)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(3)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(3)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(4)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(4)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(4)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(4)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(4)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(4)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(4)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(4)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(4)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(4)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(4)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(4)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(4)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(4)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(4)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(4)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(4)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(4)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(4)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(4)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(4)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(4)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(4)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(4)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(5)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(5)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(5)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(5)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(5)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(5)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(5)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(5)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(5)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(5)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(5)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(5)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(5)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(5)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(5)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(5)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(5)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(5)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(5)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(5)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(5)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(5)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(5)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(5)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(6)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(6)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(6)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(6)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(6)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(6)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(6)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(6)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(6)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(6)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(6)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(6)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(6)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(6)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(6)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(6)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(6)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(6)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(6)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(6)
+  .star-container
+  .star
+  svg.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(6)
+  .star-container
+  .star
+  i.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(6)
+  .star-container
+  .star
+  i.star-half,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(6)
+  .star-container
+  .star
+  svg.star-filled,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(6)
+  .star-container
+  .star
+  svg.star-half,
+.star.empty i.star-filled,
+.star.empty i.star-half,
+.star.empty svg.star-filled,
+.star.empty svg.star-half {
+  opacity: 0;
+}
+
+.rating.hover:hover.hover-1 .star-container .star i.star-empty,
+.rating.hover:hover.hover-1 .star-container .star svg.star-empty,
+.rating.hover:hover.hover-2 .star-container .star i.star-empty,
+.rating.hover:hover.hover-2 .star-container .star svg.star-empty,
+.rating.hover:hover.hover-3 .star-container .star i.star-empty,
+.rating.hover:hover.hover-3 .star-container .star svg.star-empty,
+.rating.hover:hover.hover-4 .star-container .star i.star-empty,
+.rating.hover:hover.hover-4 .star-container .star svg.star-empty,
+.rating.hover:hover.hover-5 .star-container .star i.star-empty,
+.rating.hover:hover.hover-5 .star-container .star svg.star-empty,
+.rating.hover:hover.hover-6 .star-container .star i.star-empty,
+.rating.hover:hover.hover-6 .star-container .star svg.star-empty,
+.rating.hover:hover.value-1.half .star-container .star i.star-empty,
+.rating.hover:hover.value-1.half .star-container .star svg.star-empty,
+.rating.hover:hover.value-2.half .star-container .star i.star-empty,
+.rating.hover:hover.value-2.half .star-container .star svg.star-empty,
+.rating.hover:hover.value-3.half .star-container .star i.star-empty,
+.rating.hover:hover.value-3.half .star-container .star svg.star-empty,
+.rating.hover:hover.value-4.half .star-container .star i.star-empty,
+.rating.hover:hover.value-4.half .star-container .star svg.star-empty,
+.rating.hover:hover.value-5.half .star-container .star i.star-empty,
+.rating.hover:hover.value-5.half .star-container .star svg.star-empty,
+.rating.hover:hover.value-6.half .star-container .star i.star-empty,
+.rating.hover:hover.value-6.half .star-container .star svg.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-1:first-child
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-1:first-child
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-2:first-child
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-2:first-child
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-3:first-child
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-3:first-child
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-4:first-child
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-4:first-child
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-5:first-child
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-5:first-child
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-6:first-child
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-0.half
+  .rating.hover.star:hover.value-6:first-child
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(2)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(2)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(2)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(2)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(2)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(2)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(2)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(2)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(2)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(2)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(2)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-1.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(2)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(3)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(3)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(3)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(3)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(3)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(3)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(3)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(3)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(3)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(3)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(3)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-2.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(3)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(4)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(4)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(4)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(4)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(4)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(4)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(4)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(4)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(4)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(4)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(4)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-3.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(4)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(5)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(5)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(5)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(5)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(5)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(5)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(5)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(5)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(5)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(5)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(5)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-4.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(5)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(6)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-1:nth-child(6)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(6)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-2:nth-child(6)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(6)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-3:nth-child(6)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(6)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-4:nth-child(6)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(6)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-5:nth-child(6)
+  .star-container
+  .star
+  svg.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(6)
+  .star-container
+  .star
+  i.star-empty,
+.rating.value-5.half
+  .star-container
+  .rating.hover.star:hover.value-6:nth-child(6)
+  .star-container
+  .star
+  svg.star-empty,
+.star.empty i.star-empty,
+.star.empty svg.star-empty {
+  opacity: 1;
+}
+
+.rating.value-0.half .star:first-child i.star-empty,
+.rating.value-0.half .star:first-child i.star-filled,
+.rating.value-0.half .star:first-child svg.star-empty,
+.rating.value-0.half .star:first-child svg.star-filled,
+.rating.value-1.half .star-container .star:nth-child(2) i.star-empty,
+.rating.value-1.half .star-container .star:nth-child(2) i.star-filled,
+.rating.value-1.half .star-container .star:nth-child(2) svg.star-empty,
+.rating.value-1.half .star-container .star:nth-child(2) svg.star-filled,
+.rating.value-2.half .star-container .star:nth-child(3) i.star-empty,
+.rating.value-2.half .star-container .star:nth-child(3) i.star-filled,
+.rating.value-2.half .star-container .star:nth-child(3) svg.star-empty,
+.rating.value-2.half .star-container .star:nth-child(3) svg.star-filled,
+.rating.value-3.half .star-container .star:nth-child(4) i.star-empty,
+.rating.value-3.half .star-container .star:nth-child(4) i.star-filled,
+.rating.value-3.half .star-container .star:nth-child(4) svg.star-empty,
+.rating.value-3.half .star-container .star:nth-child(4) svg.star-filled,
+.rating.value-4.half .star-container .star:nth-child(5) i.star-empty,
+.rating.value-4.half .star-container .star:nth-child(5) i.star-filled,
+.rating.value-4.half .star-container .star:nth-child(5) svg.star-empty,
+.rating.value-4.half .star-container .star:nth-child(5) svg.star-filled,
+.rating.value-5.half .star-container .star:nth-child(6) i.star-empty,
+.rating.value-5.half .star-container .star:nth-child(6) i.star-filled,
+.rating.value-5.half .star-container .star:nth-child(6) svg.star-empty,
+.rating.value-5.half .star-container .star:nth-child(6) svg.star-filled,
+.star.half i.star-empty,
+.star.half i.star-filled,
+.star.half svg.star-empty,
+.star.half svg.star-filled {
+  opacity: 0;
+}
+
+.rating.value-0.half .star:first-child i.star-half,
+.rating.value-0.half .star:first-child svg.star-half,
+.rating.value-1.half .star-container .star:nth-child(2) i.star-half,
+.rating.value-1.half .star-container .star:nth-child(2) svg.star-half,
+.rating.value-2.half .star-container .star:nth-child(3) i.star-half,
+.rating.value-2.half .star-container .star:nth-child(3) svg.star-half,
+.rating.value-3.half .star-container .star:nth-child(4) i.star-half,
+.rating.value-3.half .star-container .star:nth-child(4) svg.star-half,
+.rating.value-4.half .star-container .star:nth-child(5) i.star-half,
+.rating.value-4.half .star-container .star:nth-child(5) svg.star-half,
+.rating.value-5.half .star-container .star:nth-child(6) i.star-half,
+.rating.value-5.half .star-container .star:nth-child(6) svg.star-half,
+.star.half i.star-half,
+.star.half svg.star-half {
+  opacity: 1;
+}
+
+.rating.hover:hover.hover-1
+  .star-container
+  .star:nth-child(-n + 1)
+  i.star-empty,
+.rating.hover:hover.hover-1
+  .star-container
+  .star:nth-child(-n + 1)
+  i.star-filled,
+.rating.hover:hover.hover-1
+  .star-container
+  .star:nth-child(-n + 1)
+  svg.star-empty,
+.rating.hover:hover.hover-1
+  .star-container
+  .star:nth-child(-n + 1)
+  svg.star-filled,
+.rating.hover:hover.hover-2
+  .star-container
+  .star:nth-child(-n + 2)
+  i.star-empty,
+.rating.hover:hover.hover-2
+  .star-container
+  .star:nth-child(-n + 2)
+  i.star-filled,
+.rating.hover:hover.hover-2
+  .star-container
+  .star:nth-child(-n + 2)
+  svg.star-empty,
+.rating.hover:hover.hover-2
+  .star-container
+  .star:nth-child(-n + 2)
+  svg.star-filled,
+.rating.hover:hover.hover-3
+  .star-container
+  .star:nth-child(-n + 3)
+  i.star-empty,
+.rating.hover:hover.hover-3
+  .star-container
+  .star:nth-child(-n + 3)
+  i.star-filled,
+.rating.hover:hover.hover-3
+  .star-container
+  .star:nth-child(-n + 3)
+  svg.star-empty,
+.rating.hover:hover.hover-3
+  .star-container
+  .star:nth-child(-n + 3)
+  svg.star-filled,
+.rating.hover:hover.hover-4
+  .star-container
+  .star:nth-child(-n + 4)
+  i.star-empty,
+.rating.hover:hover.hover-4
+  .star-container
+  .star:nth-child(-n + 4)
+  i.star-filled,
+.rating.hover:hover.hover-4
+  .star-container
+  .star:nth-child(-n + 4)
+  svg.star-empty,
+.rating.hover:hover.hover-4
+  .star-container
+  .star:nth-child(-n + 4)
+  svg.star-filled,
+.rating.hover:hover.hover-5
+  .star-container
+  .star:nth-child(-n + 5)
+  i.star-empty,
+.rating.hover:hover.hover-5
+  .star-container
+  .star:nth-child(-n + 5)
+  i.star-filled,
+.rating.hover:hover.hover-5
+  .star-container
+  .star:nth-child(-n + 5)
+  svg.star-empty,
+.rating.hover:hover.hover-5
+  .star-container
+  .star:nth-child(-n + 5)
+  svg.star-filled,
+.rating.hover:hover.hover-6
+  .star-container
+  .star:nth-child(-n + 6)
+  i.star-empty,
+.rating.hover:hover.hover-6
+  .star-container
+  .star:nth-child(-n + 6)
+  i.star-filled,
+.rating.hover:hover.hover-6
+  .star-container
+  .star:nth-child(-n + 6)
+  svg.star-empty,
+.rating.hover:hover.hover-6
+  .star-container
+  .star:nth-child(-n + 6)
+  svg.star-filled,
+.rating.value-1 .star-container .star:nth-child(-n + 1) i.star-empty,
+.rating.value-1 .star-container .star:nth-child(-n + 1) i.star-filled,
+.rating.value-1 .star-container .star:nth-child(-n + 1) svg.star-empty,
+.rating.value-1 .star-container .star:nth-child(-n + 1) svg.star-filled,
+.rating.value-2 .star-container .star:nth-child(-n + 2) i.star-empty,
+.rating.value-2 .star-container .star:nth-child(-n + 2) i.star-filled,
+.rating.value-2 .star-container .star:nth-child(-n + 2) svg.star-empty,
+.rating.value-2 .star-container .star:nth-child(-n + 2) svg.star-filled,
+.rating.value-3 .star-container .star:nth-child(-n + 3) i.star-empty,
+.rating.value-3 .star-container .star:nth-child(-n + 3) i.star-filled,
+.rating.value-3 .star-container .star:nth-child(-n + 3) svg.star-empty,
+.rating.value-3 .star-container .star:nth-child(-n + 3) svg.star-filled,
+.rating.value-4 .star-container .star:nth-child(-n + 4) i.star-empty,
+.rating.value-4 .star-container .star:nth-child(-n + 4) i.star-filled,
+.rating.value-4 .star-container .star:nth-child(-n + 4) svg.star-empty,
+.rating.value-4 .star-container .star:nth-child(-n + 4) svg.star-filled,
+.rating.value-5 .star-container .star:nth-child(-n + 5) i.star-empty,
+.rating.value-5 .star-container .star:nth-child(-n + 5) i.star-filled,
+.rating.value-5 .star-container .star:nth-child(-n + 5) svg.star-empty,
+.rating.value-5 .star-container .star:nth-child(-n + 5) svg.star-filled,
+.rating.value-6 .star-container .star:nth-child(-n + 6) i.star-empty,
+.rating.value-6 .star-container .star:nth-child(-n + 6) i.star-filled,
+.rating.value-6 .star-container .star:nth-child(-n + 6) svg.star-empty,
+.rating.value-6 .star-container .star:nth-child(-n + 6) svg.star-filled,
+.rating.value-7 .star-container .star:nth-child(-n + 7) i.star-empty,
+.rating.value-7 .star-container .star:nth-child(-n + 7) i.star-filled,
+.rating.value-7 .star-container .star:nth-child(-n + 7) svg.star-empty,
+.rating.value-7 .star-container .star:nth-child(-n + 7) svg.star-filled,
+.rating.value-8 .star-container .star:nth-child(-n + 8) i.star-empty,
+.rating.value-8 .star-container .star:nth-child(-n + 8) i.star-filled,
+.rating.value-8 .star-container .star:nth-child(-n + 8) svg.star-empty,
+.rating.value-8 .star-container .star:nth-child(-n + 8) svg.star-filled,
+.rating.value-9 .star-container .star:nth-child(-n + 9) i.star-empty,
+.rating.value-9 .star-container .star:nth-child(-n + 9) i.star-filled,
+.rating.value-9 .star-container .star:nth-child(-n + 9) svg.star-empty,
+.rating.value-9 .star-container .star:nth-child(-n + 9) svg.star-filled,
+.rating.value-10 .star-container .star:nth-child(-n + 10) i.star-empty,
+.rating.value-10 .star-container .star:nth-child(-n + 10) i.star-filled,
+.rating.value-10 .star-container .star:nth-child(-n + 10) svg.star-empty,
+.rating.value-10 .star-container .star:nth-child(-n + 10) svg.star-filled,
+.rating.value-11 .star-container .star:nth-child(-n + 11) i.star-empty,
+.rating.value-11 .star-container .star:nth-child(-n + 11) i.star-filled,
+.rating.value-11 .star-container .star:nth-child(-n + 11) svg.star-empty,
+.rating.value-11 .star-container .star:nth-child(-n + 11) svg.star-filled,
+.rating.value-12 .star-container .star:nth-child(-n + 12) i.star-empty,
+.rating.value-12 .star-container .star:nth-child(-n + 12) i.star-filled,
+.rating.value-12 .star-container .star:nth-child(-n + 12) svg.star-empty,
+.rating.value-12 .star-container .star:nth-child(-n + 12) svg.star-filled,
+.star.filled i.star-empty,
+.star.filled i.star-filled,
+.star.filled svg.star-empty,
+.star.filled svg.star-filled {
+  opacity: 0;
+}
+
+.rating.hover:hover.hover-1
+  .star-container
+  .star:nth-child(-n + 1)
+  i.star-filled,
+.rating.hover:hover.hover-1
+  .star-container
+  .star:nth-child(-n + 1)
+  svg.star-filled,
+.rating.hover:hover.hover-2
+  .star-container
+  .star:nth-child(-n + 2)
+  i.star-filled,
+.rating.hover:hover.hover-2
+  .star-container
+  .star:nth-child(-n + 2)
+  svg.star-filled,
+.rating.hover:hover.hover-3
+  .star-container
+  .star:nth-child(-n + 3)
+  i.star-filled,
+.rating.hover:hover.hover-3
+  .star-container
+  .star:nth-child(-n + 3)
+  svg.star-filled,
+.rating.hover:hover.hover-4
+  .star-container
+  .star:nth-child(-n + 4)
+  i.star-filled,
+.rating.hover:hover.hover-4
+  .star-container
+  .star:nth-child(-n + 4)
+  svg.star-filled,
+.rating.hover:hover.hover-5
+  .star-container
+  .star:nth-child(-n + 5)
+  i.star-filled,
+.rating.hover:hover.hover-5
+  .star-container
+  .star:nth-child(-n + 5)
+  svg.star-filled,
+.rating.hover:hover.hover-6
+  .star-container
+  .star:nth-child(-n + 6)
+  i.star-filled,
+.rating.hover:hover.hover-6
+  .star-container
+  .star:nth-child(-n + 6)
+  svg.star-filled,
+.rating.value-1 .star-container .star:nth-child(-n + 1) i.star-filled,
+.rating.value-1 .star-container .star:nth-child(-n + 1) svg.star-filled,
+.rating.value-2 .star-container .star:nth-child(-n + 2) i.star-filled,
+.rating.value-2 .star-container .star:nth-child(-n + 2) svg.star-filled,
+.rating.value-3 .star-container .star:nth-child(-n + 3) i.star-filled,
+.rating.value-3 .star-container .star:nth-child(-n + 3) svg.star-filled,
+.rating.value-4 .star-container .star:nth-child(-n + 4) i.star-filled,
+.rating.value-4 .star-container .star:nth-child(-n + 4) svg.star-filled,
+.rating.value-5 .star-container .star:nth-child(-n + 5) i.star-filled,
+.rating.value-5 .star-container .star:nth-child(-n + 5) svg.star-filled,
+.rating.value-6 .star-container .star:nth-child(-n + 6) i.star-filled,
+.rating.value-6 .star-container .star:nth-child(-n + 6) svg.star-filled,
+.rating.value-7 .star-container .star:nth-child(-n + 7) i.star-filled,
+.rating.value-7 .star-container .star:nth-child(-n + 7) svg.star-filled,
+.rating.value-8 .star-container .star:nth-child(-n + 8) i.star-filled,
+.rating.value-8 .star-container .star:nth-child(-n + 8) svg.star-filled,
+.rating.value-9 .star-container .star:nth-child(-n + 9) i.star-filled,
+.rating.value-9 .star-container .star:nth-child(-n + 9) svg.star-filled,
+.rating.value-10 .star-container .star:nth-child(-n + 10) i.star-filled,
+.rating.value-10 .star-container .star:nth-child(-n + 10) svg.star-filled,
+.rating.value-11 .star-container .star:nth-child(-n + 11) i.star-filled,
+.rating.value-11 .star-container .star:nth-child(-n + 11) svg.star-filled,
+.rating.value-12 .star-container .star:nth-child(-n + 12) i.star-filled,
+.rating.value-12 .star-container .star:nth-child(-n + 12) svg.star-filled,
+.star.filled i.star-filled,
+.star.filled svg.star-filled {
+  opacity: 1;
+}
+
+.star-container .star svg,
+.star.default svg {
+  fill: #999;
+}
+
+.star-container .star i,
+.star.default i {
+  color: #999;
+}
+
+.rating.hover:hover.hover-1 .star-container .star svg,
+.rating.hover:hover.hover-2 .star-container .star svg,
+.rating.value-0.half .star svg,
+.rating.value-1 .star-container .star svg,
+.rating.value-1.half
+  .star-container
+  .rating.value-0.star:nth-child(2)
+  .star
+  svg,
+.rating.value-2 .star-container .star svg,
+.rating.value-2.half
+  .star-container
+  .rating.value-0.star:nth-child(3)
+  .star
+  svg,
+.rating.value-3.half
+  .star-container
+  .rating.value-0.star:nth-child(4)
+  .star
+  svg,
+.rating.value-4.half
+  .star-container
+  .rating.value-0.star:nth-child(5)
+  .star
+  svg,
+.rating.value-5.half
+  .star-container
+  .rating.value-0.star:nth-child(6)
+  .star
+  svg,
+.star.negative svg {
+  fill: #f03c56;
+}
+
+.rating.hover:hover.hover-1 .star-container .star i,
+.rating.hover:hover.hover-2 .star-container .star i,
+.rating.value-0.half .star i,
+.rating.value-1 .star-container .star i,
+.rating.value-1.half .star-container .rating.value-0.star:nth-child(2) .star i,
+.rating.value-2 .star-container .star i,
+.rating.value-2.half .star-container .rating.value-0.star:nth-child(3) .star i,
+.rating.value-3.half .star-container .rating.value-0.star:nth-child(4) .star i,
+.rating.value-4.half .star-container .rating.value-0.star:nth-child(5) .star i,
+.rating.value-5.half .star-container .rating.value-0.star:nth-child(6) .star i,
+.star.negative i {
+  color: #f03c56;
+}
+
+.rating.hover:hover.hover-3 .star-container .star svg,
+.rating.value-3 .star-container .star svg,
+.star.ok svg {
+  fill: #ffc058;
+}
+
+.rating.hover:hover.hover-3 .star-container .star i,
+.rating.value-3 .star-container .star i,
+.star.ok i {
+  color: #ffc058;
+}
+
+.rating.hover:hover.hover-4 .star-container .star svg,
+.rating.hover:hover.hover-5 .star-container .star svg,
+.rating.hover:hover.hover-6 .star-container .star svg,
+.rating.value-4 .star-container .star svg,
+.rating.value-5 .star-container .star svg,
+.rating.value-6 .star-container .star svg,
+.rating.value-7 .star-container .star svg,
+.rating.value-8 .star-container .star svg,
+.rating.value-9 .star-container .star svg,
+.rating.value-10 .star-container .star svg,
+.rating.value-11 .star-container .star svg,
+.rating.value-12 .star-container .star svg,
+.star.positive svg {
+  fill: #7ed321;
+}
+
+.rating.hover:hover.hover-4 .star-container .star i,
+.rating.hover:hover.hover-5 .star-container .star i,
+.rating.hover:hover.hover-6 .star-container .star i,
+.rating.value-4 .star-container .star i,
+.rating.value-5 .star-container .star i,
+.rating.value-6 .star-container .star i,
+.rating.value-7 .star-container .star i,
+.rating.value-8 .star-container .star i,
+.rating.value-9 .star-container .star i,
+.rating.value-10 .star-container .star i,
+.rating.value-11 .star-container .star i,
+.rating.value-12 .star-container .star i,
+.star.positive i {
+  color: #7ed321;
+}
+
+.rating.star-svg i,
+.star.svg i {
+  display: none;
+}
+
+.rating.star-svg svg,
+.star.svg svg {
+  display: flex;
+}
+
+.rating.star-custom-icon svg,
+.rating.star-icon svg,
+.rating.theme-kununu .star-container .star svg,
+.star.custom-icon svg,
+.star.icon svg {
+  display: none;
+}
+
+.rating.star-custom-icon i,
+.rating.star-icon i,
+.rating.theme-kununu .star-container .star i,
+.star.custom-icon i,
+.star.icon i {
+  display: flex;
+}
+
+.rating.small .star,
+.star.small {
+  width: 10px;
+  height: 9, 5px;
+}
+
+.rating.small .star i,
+.star.small i {
+  font-size: 11px;
+  line-height: 10px;
+}
+
+.rating.medium .star,
+.star.medium {
+  width: 20px;
+  height: 20px;
+}
+
+.rating.medium .star i,
+.star.medium i {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.rating.large .star,
+.star.large {
+  width: 35px;
+  height: 33.3px;
+}
+
+.rating.large .star i,
+.star.large i {
+  font-size: 36px;
+  line-height: 35px;
+}
+
+.rating.disabled .star-container .star,
+.star.disabled {
+  opacity: 0.5;
+}
+
+.rating.direction-rtl .star-container .star i.star-half,
+.rating.direction-rtl .star-container .star svg.star-half,
+.star-container.direction-rtl .star i.star-half,
+.star-container.direction-rtl .star svg.star-half,
+.star.direction-rtl i.star-half,
+.star.direction-rtl svg.star-half {
+  transform: scaleX(-1);
+}
+
+.star-container.direction-ltr .star i.star-half,
+.star-container.direction-ltr .star svg.star-half,
+.star.direction-ltr i.star-half,
+.star.direction-ltr svg.star-half {
+  transform: scale(1);
+}
+
+.label-value {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.label-value.small,
+.rating.small .label-value {
+  font-size: 9.5px;
+  line-height: 9.5px;
+}
+
+.label-value.medium,
+.rating.medium .label-value {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.label-value.large,
+.rating.large .label-value {
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.label-value.disabled,
+.rating.disabled .label-value {
+  opacity: 0.5;
+}
+
+.star-container {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.star-container + .star {
+  margin-left: 5px;
+}
+
+.star-container .star,
+.star-container .star i,
+.star-container .star svg {
+  transition: all 0.3s ease;
+}
+
+.star-container svg {
+  z-index: 2;
+}
+
+.star-container i {
+  z-index: 1;
+}
+
+.rating.direction-rtl .star-container,
+.star-container.direction-rtl {
+  direction: rtl;
+}
+
+.star-container.direction-ltr {
+  direction: ltr;
+}
+
+.rating.space-no .star-container,
+.star-container.space-no {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.rating.space-between .star-container,
+.star-container.space-between {
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+.rating.space-around .star-container,
+.star-container.space-around {
+  flex: 1 1 auto;
+  justify-content: space-around;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.rating.label-hidden .label-value {
+  display: none;
+}
+
+.rating.label-visible {
+  display: flex;
+}
+
+.rating.label-top {
+  flex-direction: column;
+}
+
+.rating.label-top .label-value + .star-container {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5px;
+}
+
+.rating.label-left .label-value {
+  flex: 0 0 auto;
+}
+
+.rating.label-left .label-value + .star-container {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.rating.label-right {
+  flex-direction: row-reverse;
+}
+
+.rating.label-right .label-value + .star-container {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.rating.label-bottom {
+  flex-direction: column-reverse;
+}
+
+.rating.label-bottom .label-value + .star-container {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 5px;
+}
+
+.rating.direction-rtl {
+  direction: rtl;
+}
+
+.rating.direction-ltr {
+  direction: ltr;
+}
+
+.rating.color-default .star-container .star svg {
+  fill: #999;
+}
+
+.rating.color-default .star-container .star i {
+  color: #999;
+}
+
+.rating.color-ok .star-container .star svg {
+  fill: #ffc058;
+}
+
+.rating.color-ok .star-container .star i {
+  color: #ffc058;
+}
+
+.rating.color-positive .star-container .star svg {
+  fill: #7ed321;
+}
+
+.rating.color-positive .star-container .star i {
+  color: #7ed321;
+}
+
+.rating.color-negative .star-container .star svg {
+  fill: #f03c56;
+}
+
+.rating.color-negative .star-container .star i {
+  color: #f03c56;
+}
+
+.rating.immediately .star-container {
+  transition: all none;
+}
+
+.rating.immediately .star-container .star,
+.rating.immediately .star-container .star i,
+.rating.immediately .star-container .star svg {
+  transition: none;
+}
+
+.rating.noticeable .star-container,
+.rating.noticeable .star-container .star,
+.rating.noticeable .star-container .star i,
+.rating.noticeable .star-container .star svg {
+  transition: all 0.3s ease;
+}
+
+.rating.slow .star-container,
+.rating.slow .star-container .star,
+.rating.slow .star-container .star i,
+.rating.slow .star-container .star svg {
+  transition: all 0.8s ease;
+}
+
+.rating.theme-kununu {
+  flex-direction: column;
+  width: 78px;
+}
+
+.rating.theme-kununu .label-value,
+.rating.theme-kununu .star-container {
+  width: 100%;
+}
+
+.rating.theme-kununu .label-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 6px 0 0;
+  height: 50px;
+  border: 1px solid #e9ecec;
+  border-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2f3940;
+  letter-spacing: -1px;
+  background-color: #f8f8f8;
+}
+
+.rating.theme-kununu .star-container {
+  border-radius: 0 0 6px 6px;
+  padding: 2px 0 4px;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: center;
+  background-color: #99c613;
+  border: 1px solid #99c613;
+  border-bottom: 0;
+}
+
+.rating.theme-kununu .star-container .star {
+  height: 11px;
+  width: 11px;
+}
+
+.rating.theme-kununu .star-container .star i {
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+}
+
+.rating.theme-google-places .label-value {
+  color: #e7711b;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.rating.theme-google-places .star-container {
+  width: 65px;
+  margin-left: 2px;
+}
+
+.rating.theme-google-places .star-container .star i {
+  font-size: 17px;
+  color: #e7711b !important;
+}
+
+.rating.theme-google-places .star-container .star i.star-empty {
+  opacity: 1 !important;
+  color: #e1e1e1 !important;
+}
+
+.rating.theme-google-places .star-container .star i.star-empty:before {
+  content: "\2605";
+}
+
+.rating.theme-google-places .star-container .star i.star-half {
+  width: 7px;
+  overflow: hidden;
+}
+
+.rating.theme-google-places .star-container .star i.star-filled:before,
+.rating.theme-google-places .star-container .star i.star-half:before {
+  content: "\2605";
+}
+
+.rating.theme-rolling-stars .star-container .star {
+  transition: transform 1s;
+  transform: rotate(0deg);
+}
+
+.rating.theme-rolling-stars.value-0.half .star:first-child,
+.rating.theme-rolling-stars.value-1 .star-container .star:nth-child(-n + 1),
+.rating.theme-rolling-stars.value-1.half .star-container .star:nth-child(2),
+.rating.theme-rolling-stars.value-2 .star-container .star:nth-child(-n + 2),
+.rating.theme-rolling-stars.value-2.half .star-container .star:nth-child(3),
+.rating.theme-rolling-stars.value-3 .star-container .star:nth-child(-n + 3),
+.rating.theme-rolling-stars.value-3.half .star-container .star:nth-child(4),
+.rating.theme-rolling-stars.value-4 .star-container .star:nth-child(-n + 4),
+.rating.theme-rolling-stars.value-4.half .star-container .star:nth-child(5),
+.rating.theme-rolling-stars.value-5 .star-container .star:nth-child(-n + 5),
+.rating.theme-rolling-stars.value-5.half .star-container .star:nth-child(6),
+.rating.theme-rolling-stars.value-6 .star-container .star:nth-child(-n + 6),
+.rating.value-0.half
+  .rating.theme-rolling-stars.value-0.star:first-child
+  .star:nth-child(1),
+.rating.value-0.half
+  .rating.theme-rolling-stars.value-1.star:first-child
+  .star-container
+  .star:nth-child(2),
+.rating.value-0.half
+  .rating.theme-rolling-stars.value-2.star:first-child
+  .star-container
+  .star:nth-child(3),
+.rating.value-0.half
+  .rating.theme-rolling-stars.value-3.star:first-child
+  .star-container
+  .star:nth-child(4),
+.rating.value-0.half
+  .rating.theme-rolling-stars.value-4.star:first-child
+  .star-container
+  .star:nth-child(5),
+.rating.value-0.half
+  .rating.theme-rolling-stars.value-5.star:first-child
+  .star-container
+  .star:nth-child(6),
+.rating.value-1.half
+  .star-container
+  .rating.theme-rolling-stars.value-0.star:nth-child(2)
+  .star:first-child,
+.rating.value-1.half
+  .star-container
+  .rating.theme-rolling-stars.value-1.star:nth-child(2)
+  .star-container
+  .star:nth-child(2),
+.rating.value-1.half
+  .star-container
+  .rating.theme-rolling-stars.value-2.star:nth-child(2)
+  .star-container
+  .star:nth-child(3),
+.rating.value-1.half
+  .star-container
+  .rating.theme-rolling-stars.value-3.star:nth-child(2)
+  .star-container
+  .star:nth-child(4),
+.rating.value-1.half
+  .star-container
+  .rating.theme-rolling-stars.value-4.star:nth-child(2)
+  .star-container
+  .star:nth-child(5),
+.rating.value-1.half
+  .star-container
+  .rating.theme-rolling-stars.value-5.star:nth-child(2)
+  .star-container
+  .star:nth-child(6),
+.rating.value-2.half
+  .star-container
+  .rating.theme-rolling-stars.value-0.star:nth-child(3)
+  .star:first-child,
+.rating.value-2.half
+  .star-container
+  .rating.theme-rolling-stars.value-1.star:nth-child(3)
+  .star-container
+  .star:nth-child(2),
+.rating.value-2.half
+  .star-container
+  .rating.theme-rolling-stars.value-2.star:nth-child(3)
+  .star-container
+  .star:nth-child(3),
+.rating.value-2.half
+  .star-container
+  .rating.theme-rolling-stars.value-3.star:nth-child(3)
+  .star-container
+  .star:nth-child(4),
+.rating.value-2.half
+  .star-container
+  .rating.theme-rolling-stars.value-4.star:nth-child(3)
+  .star-container
+  .star:nth-child(5),
+.rating.value-2.half
+  .star-container
+  .rating.theme-rolling-stars.value-5.star:nth-child(3)
+  .star-container
+  .star:nth-child(6),
+.rating.value-3.half
+  .star-container
+  .rating.theme-rolling-stars.value-0.star:nth-child(4)
+  .star:first-child,
+.rating.value-3.half
+  .star-container
+  .rating.theme-rolling-stars.value-1.star:nth-child(4)
+  .star-container
+  .star:nth-child(2),
+.rating.value-3.half
+  .star-container
+  .rating.theme-rolling-stars.value-2.star:nth-child(4)
+  .star-container
+  .star:nth-child(3),
+.rating.value-3.half
+  .star-container
+  .rating.theme-rolling-stars.value-3.star:nth-child(4)
+  .star-container
+  .star:nth-child(4),
+.rating.value-3.half
+  .star-container
+  .rating.theme-rolling-stars.value-4.star:nth-child(4)
+  .star-container
+  .star:nth-child(5),
+.rating.value-3.half
+  .star-container
+  .rating.theme-rolling-stars.value-5.star:nth-child(4)
+  .star-container
+  .star:nth-child(6),
+.rating.value-4.half
+  .star-container
+  .rating.theme-rolling-stars.value-0.star:nth-child(5)
+  .star:first-child,
+.rating.value-4.half
+  .star-container
+  .rating.theme-rolling-stars.value-1.star:nth-child(5)
+  .star-container
+  .star:nth-child(2),
+.rating.value-4.half
+  .star-container
+  .rating.theme-rolling-stars.value-2.star:nth-child(5)
+  .star-container
+  .star:nth-child(3),
+.rating.value-4.half
+  .star-container
+  .rating.theme-rolling-stars.value-3.star:nth-child(5)
+  .star-container
+  .star:nth-child(4),
+.rating.value-4.half
+  .star-container
+  .rating.theme-rolling-stars.value-4.star:nth-child(5)
+  .star-container
+  .star:nth-child(5),
+.rating.value-4.half
+  .star-container
+  .rating.theme-rolling-stars.value-5.star:nth-child(5)
+  .star-container
+  .star:nth-child(6),
+.rating.value-5.half
+  .star-container
+  .rating.theme-rolling-stars.value-0.star:nth-child(6)
+  .star:first-child,
+.rating.value-5.half
+  .star-container
+  .rating.theme-rolling-stars.value-1.star:nth-child(6)
+  .star-container
+  .star:nth-child(2),
+.rating.value-5.half
+  .star-container
+  .rating.theme-rolling-stars.value-2.star:nth-child(6)
+  .star-container
+  .star:nth-child(3),
+.rating.value-5.half
+  .star-container
+  .rating.theme-rolling-stars.value-3.star:nth-child(6)
+  .star-container
+  .star:nth-child(4),
+.rating.value-5.half
+  .star-container
+  .rating.theme-rolling-stars.value-4.star:nth-child(6)
+  .star-container
+  .star:nth-child(5),
+.rating.value-5.half
+  .star-container
+  .rating.theme-rolling-stars.value-5.star:nth-child(6)
+  .star-container
+  .star:nth-child(6) {
+  transition: transform 1s;
+  transform: rotate(1turn);
+}
+
+.ADMdtpDays > span:nth-child(1) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.01s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.01s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.01s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.01s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(2) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.02s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.02s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.02s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.02s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(3) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.03s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.03s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.03s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.03s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(4) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.04s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.04s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.04s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.04s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(5) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.05s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.05s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.05s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.05s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(6) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.06s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.06s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.06s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.06s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(7) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.07s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.07s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.07s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.07s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(8) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.08s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.08s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.08s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.08s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(9) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.09s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.09s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.09s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.09s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(10) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(11) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.11s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.11s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.11s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.11s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(12) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.12s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.12s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.12s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.12s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(13) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.13s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.13s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.13s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.13s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(14) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.14s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.14s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.14s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.14s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(15) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(16) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.16s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.16s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.16s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.16s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(17) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.17s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.17s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.17s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.17s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(18) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.18s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.18s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.18s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.18s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(19) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.19s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.19s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.19s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.19s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(20) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(21) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.21s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.21s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.21s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.21s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(22) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.22s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.22s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.22s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.22s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(23) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.23s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.23s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.23s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.23s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(24) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.24s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.24s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.24s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.24s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(25) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(26) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.26s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.26s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.26s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.26s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(27) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.27s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.27s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.27s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.27s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(28) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.28s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.28s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.28s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.28s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(29) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.29s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.29s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.29s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.29s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(30) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(31) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.31s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.31s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.31s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.31s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(32) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.32s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.32s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.32s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.32s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(33) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.33s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.33s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.33s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.33s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(34) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.34s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.34s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.34s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.34s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(35) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.35000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.35000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.35000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.35000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(36) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.36s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.36s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.36s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.36s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(37) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.37s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.37s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.37s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.37s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(38) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.38s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.38s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.38s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.38s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(39) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.39s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.39s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.39s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.39s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(40) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(41) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.41000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.41000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.41000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.41000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(42) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.42s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.42s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.42s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.42s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(43) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.43s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.43s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.43s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.43s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(44) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.44s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.44s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.44s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.44s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(45) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(46) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.46s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.46s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.46s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.46s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(47) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.47000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.47000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.47000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.47000000000000003s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(48) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.48s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.48s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.48s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.48s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(49) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.49s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.49s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.49s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.49s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ADMdtpDays > span:nth-child(50) > span {
+  -moz-transition: all 0.5s,
+    transform 0.2s 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s,
+    transform 0.2s 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s,
+    transform 0.2s 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s,
+    transform 0.2s 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

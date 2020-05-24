@@ -6,14 +6,13 @@ var cors = require('cors');
 var rateLimit = require("express-rate-limit");
 // var csurf = require('csurf')
 var helmet = require('helmet')
-var favicon = require('serve-favicon')
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var multer = require('multer');
 var upload = multer();
 var createError = require('http-errors');
-
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -44,7 +43,9 @@ app.use(session({
 }));
 app.use(upload.array());
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(favicon(path.join(__dirname, 'public', '/assets/favicon/favicon.ico')));
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/')));
+app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist/')));
+app.use(favicon(path.join(__dirname, 'public', './images/dastbedast.svg')));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -63,6 +64,9 @@ app.use('/donate', donateRouter);
 app.use('/plan', planRouter);
 
 // { successRedirect: '/' }
+app.get('/login', (req, res) => {
+  res.render('body', { page: 'login', title: "پویش مومنانه | ورود" });
+});
 app.post('/login',
   passport.authenticate('local', { failureRedirect: '/error' }),
   (req, res) => res.redirect('/user/id/' + req.user.id)
@@ -72,7 +76,11 @@ app.get('/logout', (req, res) => {
   if (req.user) {
     req.logout();
     req.session.destroy();
-    res.json({ logout: "ok" });
+    if (req.is('application/json')) {
+      res.json({ logout: "ok" });
+    } else {
+      res.redirect('/');
+    }
   }
   else
     res.status(401).json({ msg: "login first" });

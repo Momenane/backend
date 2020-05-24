@@ -1,0 +1,159 @@
+<ui-view id="jahadiRegister" class="ng-scope">
+  <div class="row jahadi-register ng-scope" style="background: none;">
+    <!--img class="puzzle-1" src="/images/puzzle-dash.svg" alt=""--> <img class="puzzle-2" src="/images/puzzle-dash.svg"
+      alt=""> <img class="puzzle-3" src="/images/puzzle-dash.svg" alt="">
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-13 d-flex flex-column align-items-center justify-content-center py-5">
+          <div class="register-title so-display-1 text-ocean-blue mb-3"> ثبت اطلاعات شخصی </div>
+          <form name="needForm" autocomplete="off" style="background-color: white; padding-top: 2rem;"
+            class="ng-pristine ng-isolate-scope ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="d-flex">
+                      <div class="w-50 ml-1">
+                        <sd-input-container class="material text-right sd-rtl sd-input-invalid"> <label
+                            class="sd-required" for="input_20">نام</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength ng-touched"
+                              type="text" ng-minlength="2" ng-maxlength="40" ng-model="self.need.firstName"
+                              name="firstName" required="" id="input_20">
+                            <div ng-messages="needForm.firstName.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                              <!-- ngMessage: minlength -->
+                              <!-- ngMessage: maxlength -->
+                            </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                      <div class="w-50 mr-1">
+                        <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                            for="input_21">نام خانوادگی</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                              type="text" ng-minlength="2" ng-maxlength="40" ng-model="self.need.lastName"
+                              name="lastName" required="" id="input_21">
+                            <div ng-messages="needForm.lastName.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                              <!-- ngMessage: minlength -->
+                              <!-- ngMessage: maxlength -->
+                            </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <div class="w-50 ml-1">
+                        <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                            for="input_22">سال تاریخ تولد</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                              type="text" ng-minlength="4" ng-maxlength="4" ng-input-filter-number="uint"
+                              ng-model="self.need.birthYear" name="birthYear" required="" id="input_22">
+                            <div ng-messages="needForm.birthYear.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                              <!-- ngMessage: minlength -->
+                              <!-- ngMessage: maxlength -->
+                            </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                      <div class="w-50 mr-1">
+                        <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                            for="input_23">کد ملی</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                              type="text" ng-minlength="10" ng-maxlength="10" ng-input-filter-number="uint"
+                              ng-model="self.need.nationalCode" name="nationalCode" required="" id="input_23">
+                            <div ng-messages="needForm.nationalCode.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                              <!-- ngMessage: minlength -->
+                              <!-- ngMessage: maxlength -->
+                            </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                    </div>
+                    <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                        for="input_24">شماره تلفن</label>
+                      <div class="input-group"> <input
+                          class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                          type="text" ng-minlength="4" ng-maxlength="15" ng-input-filter-number="uint"
+                          ng-model="self.need.phoneNumber" name="phoneNumber" required="" id="input_24">
+                        <div ng-messages="needForm.phoneNumber.$error"
+                          class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                          <!-- ngMessage: minlength -->
+                          <!-- ngMessage: maxlength -->
+                        </div>
+                      </div>
+                    </sd-input-container>
+                  </div>
+                  <div class="col-lg-12">
+                    <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                        for="input_25">نشانی منزل</label>
+                      <div class="input-group"> <textarea
+                          class="reg-input pt-3 pr-2 textarea-custom h-100 so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                          ng-model="self.need.address" ng-minlength="2" ng-maxlength="200" name="address" cols="60"
+                          rows="8" required="" id="input_25"></textarea>
+                        <div ng-messages="needForm.address.$error"
+                          class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                          <!-- ngMessage: minlength -->
+                          <!-- ngMessage: maxlength -->
+                        </div>
+                      </div>
+                      <div ng-messages="needForm.needType.$error"
+                        class="sd-input-messages-animation sd-auto-hide ng-inactive"> </div>
+                    </sd-input-container>
+                    <div class="col-lg-12 d-flex justify-content-around">
+                      <div class="so-subheading-1">سرپرست خانوار</div>
+                      <sd-input-container
+                        class="custom-control custom-switch custom-control-ocean-blue sd-input-has-value sd-rtl"> <input
+                          type="checkbox" ng-model="self.need.isBreadwinner"
+                          class="custom-control-input sd-input so-input-xl ng-pristine ng-untouched ng-valid ng-empty"
+                          id="customSwitch3"> <label class="custom-control-label" for="customSwitch3"></label>
+                      </sd-input-container>
+                    </div>
+                    <div class="d-flex">
+                      <div class="w-50 ml-1">
+                        <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                            for="input_26">تعداد اعضا</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength"
+                              type="text" ng-minlength="1" ng-input-filter-number="uint" ng-model="self.need.members"
+                              name="members" required="" id="input_26">
+                            <div ng-messages="needForm.members.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                              <!-- ngMessage: minlength -->
+                            </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                      <div class="w-50 mr-1">
+                        <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                            for="input_27">نسبت</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required"
+                              type="text" ng-model="self.need.relation" name="relation" required="" id="input_27">
+                            <div ng-messages="needForm.relation.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive"> </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 text-center mt-4"> <button class="reg-btn btn btn-ocean-blue w-100"
+                      ui-sref="panel.needyRegister.needInfo" href="#!/needyRegister/needInfo"> ثبت و ادامه </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-end"> <img class="w-100" src="/images/hamdeli.svg" alt="پویش همدلی">
+    </div>
+  </div>
+</ui-view>

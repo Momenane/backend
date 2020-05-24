@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html dir="rtl" lang="fa">
+
+<head>
+  <%- include('head') %>
+</head>
+
+<body>
+  <ui-view class="view-box ng-scope">
+    <section id="panel" class="d-flex flex-column ng-scope">
+      <!-- uiView: -->
+      <ui-view class="flex-grow-1 ng-scope">
+        <div class="main-border-top ng-scope"> <img class="center-puzzle" src="/images/puzzle-dash.svg" alt=""> <img
+            class="right-puzzle" src="/images/puzzle-dash.svg" alt=""> <img class="right-bottom-puzzle"
+            src="/images/puzzle-dash.svg" alt=""> <img class="left-puzzle" src="/images/puzzle-dash.svg" alt="">
+          <section id="#main" class="mt-4 gallery container">
+            <%- include('header') %>
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start mt-5 pr-0">
+                <div class="main-title text-ocean-blue mb-5"> همدلی مومنانه </div>
+                <div class="main-title-des text-ocean-blue font-weight-normal text-center my-3"> وبسایتی برای همبستگی
+                  گروه های جـهادی <br> در جـهت تــــــامــیـن درخـواست نیــــازمندان </div>
+                <div class="d-flex flex-column mt-5"> <button onclick="location.href = '/group/add'"
+                    class="d-flex justify-content-around align-items-center main-btn btn text-white so-btn-lg ml-2"
+                    ui-sref="panel.jahadiRegister.groupInfo" href="#!/jahadiRegister/groupInfo">
+                    <div class="col-lg-2"> <svg class="svg-inline--fa s-user-plus fa-w-20 ml-1" aria-hidden="true"
+                        focusable="false" data-prefix="fas" data-icon="user-plus" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                          d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+                        </path>
+                      </svg><!-- <i class="fas s-user-plus ml-1"></i> -->
+                    </div>
+                    <div class="col-lg-10"> ثبت گروه جهادی </div>
+                  </button> <button onclick="location.href = '/member/add'"
+                    class="d-flex justify-content-around align-items-center main-btn btn text-white so-btn-lg ml-2"
+                    ui-sref="panel.needyRegister.personalInfo" href="#!/needyRegister/personalInfo">
+                    <div class="col-lg-2"> <svg class="svg-inline--fa s-user-plus fa-w-20 ml-1" aria-hidden="true"
+                        focusable="false" data-prefix="fas" data-icon="user-plus" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                          d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+                        </path>
+                      </svg><!-- <i class="fas s-user-plus ml-1"></i> -->
+                    </div>
+                    <div class="col-lg-10"> افزودن نیازمند </div>
+                  </button>
+                  <button onclick="location.href = '/login'"
+                    class="d-flex justify-content-around align-items-center btn-rounded btn-red btn text-white so-btn-lg ml-2"
+                    data-toggle="modal" data-target="#admin"> ورود به پنل ادمین </button> </div>
+              </div>
+              <div class="col-lg-6 main-illustration"> <img class="puzzle-illustration"
+                  src="/images/puzzle-illustration.svg" alt="پویش همدلی"> </div>
+            </div>
+          </section>
+        </div>
+        <div class="campaign container ng-scope">
+          <div class="enter-campaign pointer" ui-sref="panel.jahadiRegister.new"> <img class="campaign-svg"
+              src="/images/corona.png" alt="کمپین کرونا"> </div>
+        </div>
+      </ui-view>
+    </section>
+    <%- include ("footer") %>
+  </ui-view>
+</body>
+
 </html>

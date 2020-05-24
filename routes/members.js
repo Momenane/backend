@@ -5,6 +5,10 @@ var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
 
+router.get('/add', (req, res) => {
+  res.render('body', { page: 'member/add', title: "ثبت نیازمند" });
+});
+
 router.post('/add', /*roleChecker(EditPermission),*/(req, res) => {
   if (req.user) {
     req.body.register_id = req.user.id;
@@ -24,8 +28,8 @@ router.get('/list', (req, res) => {
   let offset = req.query.offset || 0;
   // todo: limit get user by group_id from user
   let options = { limit, offset };
-  if(!roleChecker(ViewPermission))
-    options.attributes= ['name', 'birth_date', 'location', 'job', 'monthly_salary', 'group_id', 'other_organization'];
+  if (!roleChecker(ViewPermission))
+    options.attributes = ['name', 'birth_date', 'location', 'job', 'monthly_salary', 'group_id', 'other_organization'];
   if (req.query.limit && req.query.offset)
     Member.findAll(options)
       .then(rows => res.json({ rows }))

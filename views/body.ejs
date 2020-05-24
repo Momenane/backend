@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+  <%- include('head') %>
+</head>
+
+<body>
+  <ui-view class="view-box ng-scope">
+    <section id="panel" class="d-flex flex-column ng-scope">
+      <ui-view class="flex-grow-1 ng-scope">
+        <div class="main-border-top ng-scope" style="padding-bottom: 5rem"> <img class="center-puzzle"
+            src="/images/puzzle-dash.svg" alt=""> <img class="right-puzzle" src="/images/puzzle-dash.svg" alt=""> <img
+            class="right-bottom-puzzle" src="/images/puzzle-dash.svg" alt=""> <img class="left-puzzle"
+            src="/images/puzzle-dash.svg" alt="">
+          <section id="#main" class="mt-4 gallery container">
+            <%- include('header') %>
+            <%- include(page) %>
+          </section>
+        </div>
+      </ui-view>
+    </section>
+    <%- include ("footer") %>
+  </ui-view>
+</body>

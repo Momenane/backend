@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="707" height="640" viewBox="0 0 707 640">
+  <defs>
+    <filter id="Path_382" x="-36.5" y="-37.5" width="782.651" height="715" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-color="#7d7d7d" flood-opacity="0.49"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <path id="Path_383" data-name="Path 383" d="M0,640H707.651s-3.482-123.822-100.725-149.109S553.75,436.979,491.738,343.98s132.824-119.365,107.7-208.758S707.651,0,707.651,0H0Z" fill="#d6e5ff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#10a2d8"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <rect id="SVGID" width="324" height="326" transform="translate(0 0.447)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-اطلاعات_گروه_جهادی">
+      <rect width="707" height="640"/>
+    </clipPath>
+  </defs>
+  <g id="اطلاعات_گروه_جهادی" data-name="اطلاعات گروه جهادی" clip-path="url(#clip-اطلاعات_گروه_جهادی)">
+    <g id="اطلاعات_گروه_جهادی_" data-name="اطلاعات گروه جهادی ">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_382)">
+        <path id="Path_382-2" data-name="Path 382" d="M0,640H707.651s-3.482-123.822-100.725-149.109S553.75,436.979,491.738,343.98s132.824-119.365,107.7-208.758S707.651,0,707.651,0H0Z" fill="#d6e5ff"/>
+      </g>
+      <g id="Group_10" data-name="Group 10" clip-path="url(#clip-path)">
+        <path id="Path_384" data-name="Path 384" d="M4.964,3,882.529.58l-4,1463.7L.965,1466.7Z" transform="translate(851.954 -317.367) rotate(72)" fill="url(#linear-gradient)"/>
+      </g>
+      <path id="Path_76" data-name="Path 76" d="M2463.988,261.976c-1.112,111.185,63.1,220.146,176.784,220.146s236.823-211.251,165.665-299.087S2465.1,150.792,2463.988,261.976Z" transform="translate(-2391.297 -26.194)" fill="#fff" opacity="0.56"/>
+      <path id="Path_77" data-name="Path 77" d="M.014,122.246C-1.1,233.431,63.112,342.392,176.8,342.392S413.621,131.141,342.463,43.305,1.126,11.062.014,122.246Z" transform="matrix(0.951, 0.309, -0.309, 0.951, 134.805, 68)" fill="#fff" opacity="0.56"/>
+      <g id="Group_63" data-name="Group 63" transform="translate(92 121.553)" clip-path="url(#clip-path-2)">
+        <g id="Group_32" data-name="Group 32" transform="translate(160.564 174.473)">
+          <path id="Path_227" data-name="Path 227" d="M497.249,439.542l-25.3-4.027a12.009,12.009,0,1,1-20.5-3.264l-25.189-4.009a9.115,9.115,0,0,0-10.436,7.563l-4.158,26.083a10.454,10.454,0,1,0-2.992,18.771l-4.158,26.083a9.111,9.111,0,0,0,7.568,10.429l70.989,11.3a9.115,9.115,0,0,0,10.437-7.563l11.308-70.937A9.11,9.11,0,0,0,497.249,439.542Z" transform="translate(-395.404 -428.127)" fill="#d4145a"/>
+        </g>
+        <g id="Group_42" data-name="Group 42" transform="translate(169.421 62.695)">
+          <path id="Path_246" data-name="Path 246" d="M498.352,150.944H426.468a9.113,9.113,0,0,0-9.116,9.109v25.785a11.825,11.825,0,1,1,0,20.262v25.785a9.113,9.113,0,0,0,9.116,9.109h27.344a10.461,10.461,0,1,0,17.084,0h27.456a9.113,9.113,0,0,0,9.116-9.109V160.053A9.113,9.113,0,0,0,498.352,150.944Z" transform="translate(-417.352 -150.944)" fill="#5c33a4"/>
+        </g>
+        <g id="Group_52" data-name="Group 52" transform="translate(60.89 157.998)">
+          <path id="Path_262" data-name="Path 262" d="M236.393,433a11.743,11.743,0,0,1,4.189.343l-2.434-24.8a9.114,9.114,0,0,0-9.962-8.176l-27.373,2.683a10.462,10.462,0,1,0-16.794,1.646l-27.374,2.683a9.111,9.111,0,0,0-8.183,9.954l7.017,71.489A9.114,9.114,0,0,0,165.441,497l71.541-7.011a9.111,9.111,0,0,0,8.183-9.955l-2.434-24.8A11.753,11.753,0,1,1,236.393,433Z" transform="translate(-148.418 -387.272)" fill="#004182"/>
+        </g>
+        <g id="Group_62" data-name="Group 62" transform="translate(56.701 48.58)">
+          <path id="Path_278" data-name="Path 278" d="M241.267,165.429a10.419,10.419,0,0,0-6.6.987l4.843-27.164a9.11,9.11,0,0,0-7.375-10.566l-70.77-12.6a9.115,9.115,0,0,0-10.573,7.37l-12.609,70.718a9.11,9.11,0,0,0,7.375,10.566l26.116,4.65a11.266,11.266,0,1,1,18.538,3.3l26.116,4.65a9.116,9.116,0,0,0,10.574-7.37l4.843-27.164a10.457,10.457,0,1,0,9.524-17.378Z" transform="translate(-138.039 -115.944)" fill="#fdd247"/>
+        </g>
+      </g>
+      <text id="باهم_به_یاری_هموطنانمان_برویم_و_خوشحالشان_کنیم_" data-name="باهم به یاری هموطنانمان برویم و خوشحالشان کنیم
+" transform="translate(254.552 555.985)" fill="#004182" font-size="14" font-family="IRANSansMobile-Bold, IRANSansMobile" font-weight="700"><tspan x="-138.423" y="0">باهم به یاری هموطنانمان برویم و خوشحالشان کنیم</tspan><tspan y="0"></tspan><tspan x="0" y="28"></tspan></text>
+      <text id="و_کمی_از_درگیری_های_ذهنیشان_را_کم_کنیم" data-name="و کمی از درگیری های ذهنیشان را کم کنیم" transform="translate(280.552 583.985)" fill="#004182" font-size="14" font-family="IRANSansMobile-Bold, IRANSansMobile" font-weight="700"><tspan x="-111.976" y="0">و کمی از درگیری های ذهنیشان را کم کنیم</tspan></text>
+      <text id="هـمـدلی_مـومـنـانـه" data-name="هـمـدلی مـومـنـانـه" transform="translate(165 518)" fill="#004182" font-size="22" font-family="IRANSansMobile-Bold, IRANSansMobile" font-weight="700"><tspan x="0" y="0">هـمـدلی مـومـنـانـه</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -14,13 +14,14 @@ class User extends Model {
   static init(sequelize) {
     return super.init({
       username: { type: DataTypes.STRING, unique: true, allowNull: false },
-      name: { type: DataTypes.STRING, allowNull: false },
-      surname: { type: DataTypes.STRING, allowNull: false },
+      firstName: { type: DataTypes.STRING, allowNull: false },
+      lastName: { type: DataTypes.STRING, allowNull: false },
       password: { type: DataTypes.STRING, allowNull: false },
       salt: { type: DataTypes.STRING, allowNull: false },
       role: { type: PermissionEnum, allowNull: false },
       email: { type: DataTypes.STRING, unique: true, allowNull: false, validate: { isEmail: true } },
-      tel: { type: DataTypes.STRING, validate: { is: /^[0-9\+,-]+$/ } }
+      tel: { type: DataTypes.STRING, validate: { is: /^[0-9\+,-]+$/ } },
+      address: DataTypes.STRING,
     }, { sequelize });
   }
   static associate(models) {

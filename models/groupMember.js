@@ -9,11 +9,11 @@ const MaritalStatus = DataTypes.ENUM(['None', 'Single', 'Married'])
 class GroupMember extends Model {
   static init(sequelize) {
     return super.init({
-      name: { type: DataTypes.STRING, allowNull: false },
-      surname: { type: DataTypes.STRING, allowNull: false },
+      firstName: { type: DataTypes.STRING, allowNull: false },
+      lastName: { type: DataTypes.STRING, allowNull: false },
       birth_date: DataTypes.STRING,
       sex: { type: SexEnum, allowNull: false, defaultValue: 'None' },
-      national_code: { type: DataTypes.STRING, unique:true, allowNull: false, is: /^[0-9]+$/ },
+      national_code: { type: DataTypes.STRING, unique: true, allowNull: false, is: /^[0-9]+$/ },
       marital: { type: MaritalStatus, allowNull: false, defaultValue: 'None' },
       is_households: { type: DataTypes.BOOLEAN, allowNull: false },
       family_parent_id: { type: DataTypes.INTEGER, allowNull: false, defaultValue: -1 },

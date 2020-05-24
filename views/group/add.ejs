@@ -1,0 +1,119 @@
+<ui-view id="jahadiRegister" class="ng-scope">
+  <div class="row jahadi-register ng-scope" style="background: none;">
+    <!--img class="puzzle-1" src="/images/puzzle-dash.svg" alt=""--> <img class="puzzle-2" src="/images/puzzle-dash.svg"
+      alt=""> <img class="puzzle-3" src="/images/puzzle-dash.svg" alt="">
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-13 d-flex flex-column align-items-center justify-content-center py-5">
+          <div class="register-title so-display-1 text-ocean-blue"> ثبت اطلاعات گروه جهادی </div>
+          <form name="jahadiForm" autocomplete="off" method="POST"
+            class="ng-pristine ng-isolate-scope ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+            style="background-color: white; padding-top: 2rem;">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                        for="input_32">نام گروه</label>
+                      <div class="input-group"> <input
+                          class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                          type="text" ng-minlength="2" ng-maxlength="40" ng-model="self.jahadi.name" name="name"
+                          required="" id="input_32">
+                        <div ng-messages="jahadiForm.name.$error"
+                          class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                          <!-- ngMessage: minlength -->
+                          <!-- ngMessage: maxlength -->
+                        </div>
+                      </div>
+                    </sd-input-container>
+                    <div class="d-flex">
+                      <div class="w-50 ml-1">
+                        <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                            for="input_33">نام سرگروه</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                              type="text" ng-minlength="2" ng-maxlength="40" ng-model="self.jahadi.firstName"
+                              name="firstName" required="" id="input_33">
+                            <div ng-messages="jahadiForm.firstName.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                              <!-- ngMessage: minlength -->
+                              <!-- ngMessage: maxlength -->
+                            </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                      <div class="w-50 mr-1">
+                        <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                            for="input_34">نام خانوادگی سرگروه</label>
+                          <div class="input-group"> <input
+                              class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                              type="text" ng-minlength="2" ng-maxlength="40" ng-model="self.jahadi.lastName"
+                              name="lastName" required="" id="input_34">
+                            <div ng-messages="jahadiForm.lastName.$error"
+                              class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                              <!-- ngMessage: minlength -->
+                              <!-- ngMessage: maxlength -->
+                            </div>
+                          </div>
+                        </sd-input-container>
+                      </div>
+                    </div>
+                    <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                        for="input_35">شماره تلفن سرگروه</label>
+                      <div class="input-group"> <input
+                          class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                          type="text" ng-minlength="1" ng-maxlength="15" ng-input-filter-number="uint"
+                          ng-model="self.jahadi.phoneNumber" name="phoneNumber" required="" id="input_35">
+                        <div ng-messages="jahadiForm.phoneNumber.$error"
+                          class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                          <!-- ngMessage: minlength -->
+                          <!-- ngMessage: maxlength -->
+                        </div>
+                      </div>
+                    </sd-input-container>
+                    <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                        for="input_36">شماره تلفن اضطراری</label>
+                      <div class="input-group"> <input
+                          class="reg-input so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                          type="text" ng-minlength="1" ng-maxlength="15" ng-input-filter-number="uint"
+                          ng-model="self.jahadi.emergencyNumber" name="emergencyNumber" required="" id="input_36">
+                        <div ng-messages="jahadiForm.emergencyNumber.$error"
+                          class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                          <!-- ngMessage: minlength -->
+                          <!-- ngMessage: maxlength -->
+                        </div>
+                      </div>
+                    </sd-input-container>
+                  </div>
+                  <div class="col-lg-12">
+                    <sd-input-container class="material text-right sd-rtl"> <label class="sd-required"
+                        for="input_37">نشانی</label>
+                      <div class="input-group"> <textarea
+                          class="reg-input pt-3 pr-2 textarea-custom h-100 so-input-xl w-100 ng-pristine ng-untouched sd-input ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                          ng-model="self.jahadi.address" ng-minlength="2" ng-maxlength="200" name="address" cols="60"
+                          rows="3" required="" id="input_37"></textarea>
+                        <div ng-messages="jahadiForm.address.$error"
+                          class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                          <!-- ngMessage: minlength -->
+                          <!-- ngMessage: maxlength -->
+                        </div>
+                      </div>
+                      <div ng-messages="jahadiForm.jahadiType.$error"
+                        class="sd-input-messages-animation sd-auto-hide ng-inactive">
+                        <!-- ngMessage: required -->
+                      </div>
+                    </sd-input-container>
+                  </div>
+                  <div class="col-lg-12 text-center mt-4"> <button class="reg-btn btn btn-ocean-blue w-100"> ثبت و ادامه
+                    </button> </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-end"> <img class="w-100" src="/images/hamdeli.svg" alt="پویش همدلی">
+    </div>
+  </div>
+</ui-view>

@@ -1,18 +1,32 @@
 var User = require('../models').User;
 var roleChecker = require('./permission');
+var perm = require('../models/permission');
 var express = require('express');
 var router = express.Router();
 
 // todo: use require('express-validator');
 // var nodemailer = require("nodemailer");
+router.get('/add', (req, res) => {
+  res.render('body', { page: 'user/add', title: "ثبت کاربر" });
+});
 
-router.post('/add', (req, res) => {
+router.post('/add', (req, res, next) => {
   // check for input data and validate constraint
   req.body.salt = User.newSalt();
   req.body.password = User.getStorePassword(req.body.password, req.body.salt);
+  req.body.role = perm.GroupAdmin;
   // todo: check role not is 'Admin'
+  const isJson = req.is('application/json');
   User.create(req.body)
-    .then(user => res.status(201).json(user))
+    .then(user => {
+      req.login(user, (err) => {
+        if (err) next(err);
+        else if (isJson)
+          res.status(201).json({ id: user.id });
+        else
+          res.redirect('/user/id/' + user.id);
+      });
+    })
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
 });
 
