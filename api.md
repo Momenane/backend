@@ -7,8 +7,7 @@ all available API:
 ```js
 {
   "/user", "/group", "/member", "/plan", "/donate";
-}
-+{
+}+{
   post: "/add",
   get: "/list",
   get: "/id/:id",
@@ -27,7 +26,8 @@ user = {
   password: { type: STRING, allowNull: false },
   role: { type: {'GAdmin','GEditor','GReporter'}, allowNull: false },
   email: { type: STRING, unique: true, allowNull: false, validate: { isEmail: true } },
-  tel: { type: STRING, validate: { is: /^[0-9\+,-]+$/ } }
+  tel: { type: STRING, validate: { is: /^[0-9\+,-]+$/ } },
+  address: STRING,
 };
 /user/add => post
 /user/list?offset=X&limit=Y => get
@@ -42,7 +42,7 @@ group = {
   address: { type: STRING, allowNull: false },
   site: { type: STRING, validate: { isUrl: true } },
   email: { type: STRING, validate: { isEmail: true } },
-  tel: { type: STRING, validate: { is: /^[0-9\+,-]+$/ } },
+  tel: { type: STRING, allowNull: false, validate: { is: /^[0-9\+,-]+$/ } },
   social_link: STRING, // string list
   register_number: STRING,
   target_region: STRING,
@@ -59,17 +59,18 @@ member = {
   lastName: { type: STRING, allowNull: false },
   birth_date: STRING,
   sex: { type: SexEnum, allowNull: false, defaultValue: 'None' },
-  national_code: { type: STRING, unique:true, allowNull: false, is: /^[0-9]+$/ },
+  national_code: { type: STRING, unique: true, allowNull: false, is: /^[0-9]+$/ },
   marital: { type: MaritalStatus, allowNull: false, defaultValue: 'None' },
   is_households: { type: BOOLEAN, allowNull: false },
   family_parent_id: { type: INTEGER, allowNull: false, defaultValue: -1 },
   family_names: STRING,
-  tels: { type: STRING,  is: /^[0-9\+-,]+$/ }, // comma seprated
+  family_count: INTEGER,
+  tels: { type: STRING, is: /^[0-9\+-,]+$/ }, // comma separated
   email: { type: STRING, validate: { isEmail: true } },
-  location: DataTypes.STRING,
+  location: STRING,
   address: { type: TEXT, allowNull: false },
   have_house: { type: BOOLEAN, allowNull: false },
-  job: DataTypes.STRING,
+  job: STRING,
   monthly_salary: BIGINT, // in Rial or local
   group_id: { type: INTEGER, allowNull: false },
   register_id: { type: INTEGER, allowNull: false },
@@ -82,6 +83,7 @@ member = {
 /member/id/:id => delete
 
 plan = {
+  // group_id: { type: INTEGER, allowNull: false }, // extract from user profile
   name: { type: STRING, allowNull: false },
   type: { type: STRING, allowNull: false },
   donation: { type: STRING, allowNull: false },
