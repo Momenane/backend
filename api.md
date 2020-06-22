@@ -8,11 +8,11 @@ all available API:
 {
   "/user", "/group", "/member", "/plan", "/donate";
 }+{
-  post: "/add",
-  get: "/list",
-  get: "/id/:id",
-  patch: "/id/:id",
-  delete: "/id/:id",
+  post: "/",
+  get: "/",
+  get: "/:id",
+  patch: "/:id",
+  delete: "/:id",
 };
 ```
 
@@ -21,7 +21,7 @@ all available API:
 ```js
 {
   register:{
-    path: "/user/add"
+    path: "/user/"
     post:{
       // see user API list
     }
@@ -56,9 +56,9 @@ user = {
 };
 /user/add => post
 /user/list?offset=X&limit=Y => get
-/user/id/:id => get
-/user/id/:id => patch
-/user/id/:id => delete
+/user/:id => get
+/user/:id => patch
+/user/:id => delete
 
 group = {
   name: { type: STRING, allowNull: false },
@@ -75,9 +75,9 @@ group = {
 };
 /group/add => post // set head_id from session data and set user.group_id after insert
 /group/list?offset=X&limit=Y => get
-/group/id/:id => get
-/group/id/:id => patch
-/group/id/:id => delete
+/group/:id => get
+/group/:id => patch
+/group/:id => delete
 
 member = {
   firstName: { type: STRING, allowNull: false },
@@ -103,9 +103,9 @@ member = {
 }
 /member/add => post // set register_id and group_id from user data in session
 /member/list?offset=X&limit=Y => get
-/member/id/:id => get
-/member/id/:id => patch
-/member/id/:id => delete
+/member/:id => get
+/member/:id => patch
+/member/:id => delete
 
 plan = {
   // group_id: { type: INTEGER, allowNull: false }, // extract from user profile
@@ -119,9 +119,9 @@ plan = {
 };
 /plan/add => post // set group_id from session.user.group_id
 /plan/list?offset=X&limit=Y => get
-/plan/id/:id => get
-/plan/id/:id => patch
-/plan/id/:id => delete
+/plan/:id => get
+/plan/:id => patch
+/plan/:id => delete
 
 donate = {
   member_id: { type: INTEGER, allowNull: false },
@@ -131,7 +131,7 @@ donate = {
 };
 /donate/add => post // set group_id from session.user.group_id
 /donate/list?offset=X&limit=Y => get
-/donate/id/:id => get
-/donate/id/:id => patch
-/donate/id/:id => delete
+/donate/:id => get
+/donate/:id => patch
+/donate/:id => delete
 ```

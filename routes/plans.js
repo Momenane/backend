@@ -4,14 +4,14 @@ var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
 
-router.post('/add', roleChecker(EditPermission), (req, res) => {
+router.post('/', roleChecker(EditPermission), (req, res) => {
   req.body.group_id = req.user.id;
   Plan.create(req.body)
     .then(plan => res.status(201).json(plan))
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
 });
 
-router.get('/list', roleChecker(ViewPermission), (req, res) => {
+router.get('/', roleChecker(ViewPermission), (req, res) => {
   let limit = req.query.limit || 10;
   let offset = req.query.offset || 0;
   if (req.query.limit && req.query.offset)
@@ -24,13 +24,13 @@ router.get('/list', roleChecker(ViewPermission), (req, res) => {
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
-router.get('/id/:id', roleChecker(ViewPermission), (req, res) => {
+router.get('/:id', roleChecker(ViewPermission), (req, res) => {
   Plan.findByPk(req.params.id)
     .then(plan => res.json(plan))
     .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
-router.patch('/id/:id', roleChecker(EditPermission), (req, res) => {
+router.patch('/:id', roleChecker(EditPermission), (req, res) => {
   let planId = req.params.id
   Plan.findByPk(planId)
     .then(plan => {
@@ -45,7 +45,7 @@ router.patch('/id/:id', roleChecker(EditPermission), (req, res) => {
     .catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
 
-router.delete('/id/:id', roleChecker(EditPermission), (req, res) => {
+router.delete('/:id', roleChecker(EditPermission), (req, res) => {
   let GroupId = req.params.id
   Plan.destroy({ where: { id: GroupId } })
     .then(result => res.json({ info: 'Group plan deleted successfully', msg: 'ok' }))

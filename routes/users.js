@@ -7,7 +7,7 @@ var router = express.Router();
 // todo: use require('express-validator');
 // var nodemailer = require("nodemailer");
 
-router.post('/add', (req, res, next) => {
+router.post('/', (req, res, next) => {
   // check for input data and validate constraint
   req.body.salt = User.newSalt();
   req.body.password = User.getStorePassword(req.body.password, req.body.salt);
@@ -28,7 +28,7 @@ router.post('/add', (req, res, next) => {
 });
 
 /* GET users listing. */
-router.get('/list', roleChecker('Admin'), (req, res) => {
+router.get('/', roleChecker('Admin'), (req, res) => {
   let limit = req.params.limit || 10;
   let offset = req.params.offset || 0;
   if (req.query.limit && req.query.offset)
@@ -41,7 +41,7 @@ router.get('/list', roleChecker('Admin'), (req, res) => {
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
-router.get('/id/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   let userId = req.params.id;
   if (req.user && (userId == req.user.id || req.user.role == 'Admin'))
     User.findOne({ where: { id: userId } })
@@ -51,7 +51,7 @@ router.get('/id/:id', (req, res) => {
     res.status(401).json({ error: 'Permission Denied' });
 });
 
-router.patch('/id/:id', (req, res) => {
+router.patch('/:id', (req, res) => {
   let userId = req.params.id
   if (req.user && (userId == req.user.id || req.user.role == 'Admin'))
     User.findByPk(userId)
@@ -69,7 +69,7 @@ router.patch('/id/:id', (req, res) => {
     res.status(401).json({ error: 'Permission Denied' });
 });
 
-router.delete('/id/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   let userId = req.params.id;
   if (req.user && (userId == req.user.id || req.user.role == 'Admin'))
     User.destroy({ where: { id: userId } })

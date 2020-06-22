@@ -4,7 +4,7 @@ var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
 
-router.post('/add', roleChecker(EditPermission), (req, res) => {
+router.post('/', roleChecker(EditPermission), (req, res) => {
   req.body.head_id = req.user.id;
   Group.create(req.body)
     .then(group => {
@@ -16,7 +16,7 @@ router.post('/add', roleChecker(EditPermission), (req, res) => {
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
 });
 
-router.get('/list', roleChecker(ViewPermission), (req, res) => {
+router.get('/', roleChecker(ViewPermission), (req, res) => {
   let limit = req.query.limit || 10;
   let offset = req.query.offset || 0;
   if (req.query.limit && req.query.offset)
@@ -29,13 +29,13 @@ router.get('/list', roleChecker(ViewPermission), (req, res) => {
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
-router.get('/id/:id', roleChecker(ViewPermission), (req, res) => {
+router.get('/:id', roleChecker(ViewPermission), (req, res) => {
   Group.findByPk(req.params.id, { include: ['GroupMembers'] })
     .then(groupWithMembers => res.json(groupWithMembers))
     .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
-router.patch('/id/:id', roleChecker(EditPermission), (req, res) => {
+router.patch('/:id', roleChecker(EditPermission), (req, res) => {
   let groupId = req.params.id
   Group.findByPk(groupId)
     .then(group => {
@@ -49,7 +49,7 @@ router.patch('/id/:id', roleChecker(EditPermission), (req, res) => {
     .catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
 
-router.delete('/id/:id', roleChecker(EditPermission), (req, res) => {
+router.delete('/:id', roleChecker(EditPermission), (req, res) => {
   let groupId = req.params.id
   Group.destroy({ where: { id: groupId } })
     .then(result => res.json({ info: 'Group deleted successfully', msg: 'ok' }))
