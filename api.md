@@ -16,6 +16,31 @@ all available API:
 };
 ```
 
+## Register/Login/Logout
+
+```js
+{
+  register:{
+    path: "/user/add"
+    post:{
+      // see user API list
+    }
+  },
+  login:{
+    path: "/login",
+    post:{
+      username:""
+      password:""
+    }
+  },
+  logout:{
+    path: "/logout",
+    get:{
+    }
+  }
+}
+```
+
 ## API list
 
 ```js
