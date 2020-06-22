@@ -24,7 +24,7 @@ router.get('/list', roleChecker(ViewPermission), (req, res) => {
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
-router.get('/id/:id/', roleChecker(ViewPermission), (req, res) => {
+router.get('/id/:id', roleChecker(ViewPermission), (req, res) => {
   Plan.findByPk(req.params.id)
     .then(plan => res.json(plan))
     .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));

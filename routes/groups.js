@@ -4,10 +4,6 @@ var roleChecker = require('./permission');
 var express = require('express');
 var router = express.Router();
 
-router.get('/add', (req, res) => {
-  res.render('body', { page: 'group/add', title: "ثبت گروه" });
-});
-
 router.post('/add', roleChecker(EditPermission), (req, res) => {
   req.body.head_id = req.user.id;
   Group.create(req.body)
@@ -33,7 +29,7 @@ router.get('/list', roleChecker(ViewPermission), (req, res) => {
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
 
-router.get('/id/:id/', roleChecker(ViewPermission), (req, res) => {
+router.get('/id/:id', roleChecker(ViewPermission), (req, res) => {
   Group.findByPk(req.params.id, { include: ['GroupMembers'] })
     .then(groupWithMembers => res.json(groupWithMembers))
     .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));

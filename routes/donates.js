@@ -25,7 +25,7 @@ router.get('/list', roleChecker(ViewPermission), (req, res) => {
 
 });
 
-router.get('/id/:id/', roleChecker(ViewPermission), (req, res) => {
+router.get('/id/:id', roleChecker(ViewPermission), (req, res) => {
   Donate.findByPk(req.params.id)
     .then(donate => res.json(donate))
     .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
