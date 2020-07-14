@@ -6,6 +6,7 @@ var router = express.Router();
 
 router.post('/', roleChecker(EditPermission), (req, res) => {
   req.body.group_id = req.user.group_id;
+  // todo: check plan and member is for group
   Donate.create(req.body)
     .then(donate => res.status(201).json(donate))
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
@@ -36,7 +37,7 @@ router.patch('/:id', roleChecker(EditPermission), (req, res) => {
   Donate.findByPk(doanteId)
     .then(donate => {
       var body = req.body;
-      var keys = body.keys();
+      var keys = Object.keys(body).filter((value) => value != 'id');
       for (let i = 0; req.body.length; i++)
         donate[keys[i]] = body[keys[i]];
       donate.save();

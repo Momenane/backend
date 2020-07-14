@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 router.post('/', roleChecker(EditPermission), (req, res) => {
-  req.body.group_id = req.user.id;
+  req.body.group_id = req.user.group_id;
   Plan.create(req.body)
     .then(plan => res.status(201).json(plan))
     .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
@@ -35,7 +35,7 @@ router.patch('/:id', roleChecker(EditPermission), (req, res) => {
   Plan.findByPk(planId)
     .then(plan => {
       var body = req.body;
-      var keys = body.keys();
+      var keys = Object.keys(body).filter((value) => value != 'id');
       for (let i = 0; req.body.length; i++) {
         plan[keys[i]] = body[keys[i]];
       }

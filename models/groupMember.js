@@ -11,7 +11,7 @@ class GroupMember extends Model {
     return super.init({
       firstName: { type: DataTypes.STRING, allowNull: false },
       lastName: { type: DataTypes.STRING, allowNull: false },
-      birth_date: DataTypes.STRING,
+      birth_date: DataTypes.DATE,
       sex: { type: SexEnum, allowNull: false, defaultValue: 'None' },
       national_code: { type: DataTypes.STRING, unique: true, allowNull: false, is: /^[0-9]+$/ },
       marital: { type: MaritalStatus, allowNull: false, defaultValue: 'None' },

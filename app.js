@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
   secret: "replace secret key in production",
-  name: "id_session",
+  name: "SessionIdValue",
   resave: false,
   saveUninitialized: false,
   cookie: { secure: false, maxAge: 3600000 } // todo: replace in production
@@ -61,24 +61,28 @@ app.use('/plan', planRouter);
 // { successRedirect: '/' }
 app.post('/login',
   passport.authenticate('local', { failureRedirect: '/error' }),
-  (req, res) => res.redirect('/user/id/' + req.user.id)
+  (req, res) => {
+    if (req.is('application/json'))
+      res.json({ login: "ok" });
+    else
+      res.redirect('/user/' + req.user.id)
+  }
 );
 
 app.get('/logout', (req, res) => {
   if (req.user) {
     req.logout();
     req.session.destroy();
-    if (req.is('application/json')) {
+    if (req.is('application/json'))
       res.json({ logout: "ok" });
-    } else {
+    else
       res.redirect('/');
-    }
   }
   else
     res.status(401).json({ msg: "login first" });
 });
 
-app.get('/api/list', (req,res)=>{
+app.get('/api/list', (req, res) => {
   const listEndpoints = require('express-list-endpoints')
   res.send(listEndpoints(app));
 });

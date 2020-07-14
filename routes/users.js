@@ -11,8 +11,9 @@ router.post('/', (req, res, next) => {
   // check for input data and validate constraint
   req.body.salt = User.newSalt();
   req.body.password = User.getStorePassword(req.body.password, req.body.salt);
-  req.body.role = perm.GroupAdmin;
+  // req.body.role = perm.GroupAdmin;
   // todo: check role not is 'Admin'
+  // todo: validate password format
   const isJson = req.is('application/json');
   User.create(req.body)
     .then(user => {
@@ -44,8 +45,10 @@ router.get('/', roleChecker('Admin'), (req, res) => {
 router.get('/:id', (req, res) => {
   let userId = req.params.id;
   if (req.user && (userId == req.user.id || req.user.role == 'Admin'))
-    User.findOne({ where: { id: userId } })
-      .then(user => res.json(user))
+    User.findOne({
+      attributes: ['username', 'firstName', 'lastName', 'role', 'email', 'tel', 'address'],
+      where: { id: userId }
+    }).then(user => res.json(user))
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
   else
     res.status(401).json({ error: 'Permission Denied' });
@@ -56,8 +59,14 @@ router.patch('/:id', (req, res) => {
   if (req.user && (userId == req.user.id || req.user.role == 'Admin'))
     User.findByPk(userId)
       .then(user => {
+        if (body.salt)
+          delete body.salt;
+        if (body.password) {
+          req.body.salt = User.newSalt();
+          req.body.password = User.getStorePassword(req.body.password, req.body.salt);
+        }
         var body = req.body;
-        var keys = body.keys();
+        var keys = Object.keys(body).filter((value) => value != 'id');
         // fixme: remove id and constant item
         for (let i = 0; req.body.length; i++)
           user[keys[i]] = body[keys[i]];
@@ -77,7 +86,6 @@ router.delete('/:id', (req, res) => {
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
   else
     res.status(401).json({ error: 'Permission Denied' });
-
 });
 
 module.exports = router;

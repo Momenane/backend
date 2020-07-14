@@ -62,7 +62,7 @@ router.patch('/:id', roleChecker(EditPermission), (req, res) => {
   Member.findByPk(memberId)
     .then(member => {
       var body = req.body;
-      var keys = body.keys();
+      var keys = Object.keys(body).filter((value) => value != 'id');
       for (let i = 0; req.body.length; i++)
         member[keys[i]] = body[keys[i]];
       member.save();

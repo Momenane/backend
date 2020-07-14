@@ -40,11 +40,15 @@ router.patch('/:id', roleChecker(EditPermission), (req, res) => {
   Group.findByPk(groupId)
     .then(group => {
       var body = req.body;
-      var keys = body.keys();
-      for (let i = 0; req.body.length; i++)
-        group[keys[i]] = body[keys[i]];
-      group.save();
-      res.json(group)
+      if (group.head_id == req.user.id) {
+        var keys = Object.keys(body).filter((value) => value != 'id');
+        for (let i = 0; req.body.length; i++)
+          group[keys[i]] = body[keys[i]];
+        group.save();
+        res.json(group);
+      }
+      else
+        res.status(401).json({ error: "Permission denied", info: "user not group admin" });
     })
     .catch(error => res.status(400).json({ error: 'update error', msg: error }));
 });
