@@ -9,22 +9,16 @@ var helmet = require('helmet')
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var passport = require('passport');
+var createError = require('http-errors');
 var LocalStrategy = require('passport-local').Strategy;
 var JwtStrategy = require('passport-jwt').Strategy;
-const jwt = require('./jwt');
 var multer = require('multer');
 var upload = multer();
-var createError = require('http-errors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var groupRouter = require('./routes/groups');
-var memberRouter = require('./routes/members');
-var donateRouter = require('./routes/donates');
-var planRouter = require('./routes/plans');
+const jwt = require('./jwt');
+var User = require('./models').User;
 
 var app = express();
-
 
 app.use(helmet());
 app.use(cors());
@@ -53,16 +47,46 @@ const userLimiter = rateLimit({
 app.use('/register', userLimiter);
 app.use('/login', userLimiter);
 
-app.use('/', indexRouter);
-app.use('/user', usersRouter);
-app.use('/group', groupRouter);
-app.use('/member', memberRouter);
-app.use('/donate', donateRouter);
-app.use('/plan', planRouter);
+// Authorization: Bearer token
+var jwtAuth = passport.authenticate('jwt', { session: false })
+
+app.use('/', require('./routes/index'));
+app.use('/user', jwtAuth, require('./routes/users'));
+app.use('/group', jwtAuth, require('./routes/groups'));
+app.use('/member', jwtAuth, require('./routes/members'));
+app.use('/donate', jwtAuth, require('./routes/donates'));
+app.use('/plan', jwtAuth, require('./routes/plans'));
+
+app.post('/register', (req, res, next) => {
+  // check for input data and validate constraint
+  req.body.salt = User.newSalt();
+  req.body.password = User.getStorePassword(req.body.password, req.body.salt);
+  // req.body.role = perm.GroupAdmin;
+  // todo: check role not is 'Admin'
+  // todo: validate password format
+  jwtAuth(req,res);
+  if (req.isAuthenticated())
+    return res.json({ message: "first logout" });
+  const isJson = req.is('application/json');
+  User.create(req.body)
+    .then(user => {
+      req.login(user, (err) => {
+        if (err) next(err);
+        else if (isJson) {
+          var payload = user.jwtPayload();
+          var token = jwt.sign(payload);
+          res.status(201).json({ message: "ok", token: token });
+        }
+        else
+          res.redirect('/user/id/' + user.id);
+      });
+    })
+    .catch(error => res.status(400).json({ error: 'insert error', msg: error }));
+});
 
 // { successRedirect: '/' }
 app.post('/login',
-  passport.authenticate('local', { session: false, failureRedirect: '/error' }),
+  passport.authenticate('local', { failureRedirect: '/error' }),
   (req, res) => {
     if (req.is('application/json')) {
       var payload = req.user.jwtPayload();
@@ -73,14 +97,10 @@ app.post('/login',
       res.redirect('/user/' + req.user.id)
   }
 );
-// Authorization: Bearer token
-app.post('/jwt',
-  passport.authenticate('jwt', { session: true }),
+
+app.all('/jwt', jwtAuth,
   (req, res) => {
-    if (req.is('application/json'))
-      res.json({ login: "ok" });
-    else
-      res.redirect('/user/' + req.user.id)
+    res.json({ login: "ok", id: req.user.id });
   }
 );
 
@@ -119,7 +139,6 @@ app.use(function (err, req, res, next) {
 });
 
 // passport config
-var User = require('./models').User;
 passport.serializeUser(User.passportSerialize);
 passport.deserializeUser(User.passportDeserialize);
 passport.use(new LocalStrategy(User.passportLogin));
