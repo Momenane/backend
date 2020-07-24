@@ -1,6 +1,7 @@
 var User = require('../models').User;
 var roleChecker = require('./permission');
 var perm = require('../models/permission');
+const jwt = require('../jwt');
 var express = require('express');
 var router = express.Router();
 
@@ -19,8 +20,11 @@ router.post('/', (req, res, next) => {
     .then(user => {
       req.login(user, (err) => {
         if (err) next(err);
-        else if (isJson)
-          res.status(201).json({ id: user.id });
+        else if (isJson) {
+          var payload = user.jwtPayload();
+          var token = jwt.sign(payload);
+          res.status(201).json({ message: "ok", token: token });
+        }
         else
           res.redirect('/user/id/' + user.id);
       });
@@ -41,6 +45,11 @@ router.get('/', roleChecker('Admin'), (req, res) => {
       .then(users => res.json(users))
       .catch(error => res.status(400).json({ error: 'fetch error', msg: error }));
 });
+
+router.get('/profile', (req, res) => {
+  let userId = req.user.id;
+  res.redirect('/user/' + userId);
+})
 
 router.get('/:id', (req, res) => {
   let userId = req.params.id;

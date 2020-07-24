@@ -10,6 +10,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var JwtStrategy = require('passport-jwt').Strategy;
+const jwt = require('./jwt');
 var multer = require('multer');
 var upload = multer();
 var createError = require('http-errors');
@@ -60,7 +62,20 @@ app.use('/plan', planRouter);
 
 // { successRedirect: '/' }
 app.post('/login',
-  passport.authenticate('local', { failureRedirect: '/error' }),
+  passport.authenticate('local', { session: false, failureRedirect: '/error' }),
+  (req, res) => {
+    if (req.is('application/json')) {
+      var payload = req.user.jwtPayload();
+      var token = jwt.sign(payload);
+      res.json({ message: "ok", token });
+    }
+    else
+      res.redirect('/user/' + req.user.id)
+  }
+);
+// Authorization: Bearer token
+app.post('/jwt',
+  passport.authenticate('jwt', { session: true }),
   (req, res) => {
     if (req.is('application/json'))
       res.json({ login: "ok" });
@@ -103,11 +118,11 @@ app.use(function (err, req, res, next) {
   res.json(res.locals);
 });
 
-
 // passport config
 var User = require('./models').User;
 passport.serializeUser(User.passportSerialize);
 passport.deserializeUser(User.passportDeserialize);
 passport.use(new LocalStrategy(User.passportLogin));
+passport.use(new JwtStrategy(jwt.options, User.passportJwt));
 
 module.exports = app;

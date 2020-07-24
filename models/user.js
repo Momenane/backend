@@ -4,7 +4,7 @@ const { Model, DataTypes } = require("sequelize");
 const crypto = require('crypto');
 const permission = require('./permission');
 
-// change acording to https://codewithhugo.com/using-es6-classes-for-sequelize-4-models/
+// change according to https://codewithhugo.com/using-es6-classes-for-sequelize-4-models/
 
 const PermissionEnum = DataTypes.ENUM([
   Object.values(permission)
@@ -46,8 +46,11 @@ class User extends Model {
     const hash = sha256.update(password).digest('base64');
     this.password = hash;
   }
+  jwtPayload(){
+    return { id: this.id, group_id: this.group_id, role: this.role };
+  }
   static passportSerialize(user, done) {
-    done(null, { id: user.id, role: user.role });
+    done(null, user.jwtPayload());
   }
   static passportDeserialize(userInfo, done) {
     User.findOne({ where: { id: userInfo.id } })
@@ -63,10 +66,22 @@ class User extends Model {
         var res = user.validPassword(password);
         if (!res)
           return done(null, false, { message: 'Incorrect password.' });
-        return done(null, user);
+        return done(null, user, { message: 'Logged In Successfully' });
       }
       else { return done('error'); }
-    }).catch(() => done(null, false, { message: 'Incorrect username.' }));
+    }).catch((err) => done(err, false, { message: 'Incorrect username.' }));
+  }
+  static passportJwt(jwtPayload, done) {
+    
+    User.findOne({
+      attributes: ['id', 'role', 'group_id'],
+      where: { id: jwtPayload.id }
+    }).then((user) => {
+      if (user != null) {//&& user instanceof User
+        return done(null, user, { message: 'Logged In Successfully' });
+      }
+      else { return done('error'); }
+    }).catch((err) => done(err, false, { message: 'Incorrect username.' }));
   }
 }
 module.exports = User;
