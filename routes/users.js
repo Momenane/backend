@@ -23,7 +23,7 @@ router.post('/', (req, res, next) => {
         else if (isJson) {
           var payload = user.jwtPayload();
           var token = jwt.sign(payload);
-          res.status(201).json({ message: "ok", token: token });
+          res.status(201).json({ message: "ok", token, id: user.id });
         }
         else
           res.redirect('/user/id/' + user.id);

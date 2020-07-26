@@ -72,7 +72,6 @@ class User extends Model {
     }).catch((err) => done(err, false, { message: 'Incorrect username.' }));
   }
   static passportJwt(jwtPayload, done) {
-    
     User.findOne({
       attributes: ['id', 'role', 'group_id'],
       where: { id: jwtPayload.id }

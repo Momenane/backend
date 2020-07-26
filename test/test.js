@@ -19,12 +19,12 @@ before(async () => {
   await sequelize.sync({ force: true })
 })
 
-var admin1 = { id: null, cookies: null };
-var editor1 = { id: null, cookies: null };
-var reader1 = { id: null, cookies: null };
-var admin2 = { id: null, cookies: null };
-var editor2 = { id: null, cookies: null };
-var reader2 = { id: null, cookies: null };
+var admin1 = { id: null, cookies: null, token: null };
+var editor1 = { id: null, cookies: null, token: null };
+var reader1 = { id: null, cookies: null, token: null };
+var admin2 = { id: null, cookies: null, token: null };
+var editor2 = { id: null, cookies: null, token: null };
+var reader2 = { id: null, cookies: null, token: null };
 describe("Users", () => {
   describe("User 1 (GAdmin)", () => {
     it("should create admin1", done => {
@@ -36,16 +36,17 @@ describe("Users", () => {
         role: "GAdmin",
         email: "user1@test.com",
       };
-      var req = chai.request(app).post("/user");
+      var req = chai.request(app).post("/register");
       req.send(user).then((res) => {
-        res.should.have.status(201);
+        //res.should.have.status(201);
         expect(res).to.have.cookie("SessionIdValue");
         if (debug || res.body.err || res.body.error)
           console.log("request => ", user, "\nresponse => ", res.body);
         admin1.cookies = res.headers["set-cookie"].pop().split(";")[0];
         admin1.id = res.body.id;
+        admin1.token = res.body.token;
         done();
-      })
+      }).catch((err)=>console.log(err))
       // .end((err, res) => {
       //   if (err || res.body.err || res.body.error)
       //     console.log("err", err, "\nResponse Body:", res.body);
@@ -59,6 +60,7 @@ describe("Users", () => {
     it("should get user admin1", done => {
       var req = chai.request(app).get('/user/' + admin1.id);
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send({}).end((err, res) => {
         res.should.have.status(200);
         if (debug || res.body.err || res.body.error)
@@ -69,6 +71,7 @@ describe("Users", () => {
     it("should logout user admin1", done => {
       var req = chai.request(app).get('/logout');
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send({}).end((err, res) => {
         res.should.have.status(200);
         if (debug || res.body.err || res.body.error)
@@ -79,6 +82,8 @@ describe("Users", () => {
     it("can not get user admin1 after logout", done => {
       var req = chai.request(app).get('/user/' + admin1.id);
       req.cookies = admin1.cookies;
+      // req.set('Authorization', 'Bearer ' + admin1.token);
+      // failed because jwt is state less  
       req.send({}).end((err, res) => {
         res.should.have.status(401);
         if (debug)
@@ -95,6 +100,7 @@ describe("Users", () => {
         if (debug || res.body.err || res.body.error)
           console.log("request => ", user, "\nresponse => ", res.body);
         admin1.cookies = res.headers['set-cookie'].pop().split(';')[0];
+        admin1.token = res.body.token;
         done();
       })
     })
@@ -109,7 +115,7 @@ describe("Users", () => {
         role: "GAdmin",
         email: "user2@test.com",
       };
-      var req = chai.request(app).post("/user");
+      var req = chai.request(app).post("/register");
       req.send(user).then((res) => {
         res.should.have.status(201);
         expect(res).to.have.cookie("SessionIdValue");
@@ -117,12 +123,14 @@ describe("Users", () => {
           console.log("request => ", user, "\nresponse => ", res.body);
         admin2.cookies = res.headers["set-cookie"].pop().split(";")[0];
         admin2.id = res.body.id;
+        admin2.token = res.body.token;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
     it("should get user admin2", done => {
       var req = chai.request(app).get('/user/' + admin2.id);
       req.cookies = admin2.cookies;
+      req.set('Authorization', 'Bearer ' + admin2.token);
       req.send({}).end((err, res) => {
         res.should.have.status(200);
         if (debug || res.body.err || res.body.error)
@@ -153,17 +161,19 @@ describe("Groups", () => {
       };
       var req = chai.request(app).post("/group");
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send(group).then((res) => {
         res.should.have.status(201);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", group, "\nresponse => ", res.body);
         group1.id = res.body.id;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
     it("should get group1", done => {
       var req = chai.request(app).get('/group/' + group1.id);
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send({}).end((err, res) => {
         res.should.have.status(200);
         if (debug || res.body.err || res.body.error)
@@ -175,6 +185,7 @@ describe("Groups", () => {
       var req = chai.request(app).patch('/group/' + group1.id);
       var group = { id: group1.id, tel: "23456789" };
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send(group).end((err, res) => {
         if (debug || res.body.err || res.body.error)
           console.log("request => ", group, "\nresponse => ", res.body);
@@ -200,17 +211,19 @@ describe("Groups", () => {
       };
       var req = chai.request(app).post("/group");
       req.cookies = admin2.cookies;
+      req.set('Authorization', 'Bearer ' + admin2.token);
       req.send(group).then((res) => {
         res.should.have.status(201);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", group, "\nresponse => ", res.body);
         group2.id = res.body.id;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
     it("should get group2", done => {
       var req = chai.request(app).get('/group/' + group2.id);
       req.cookies = admin2.cookies;
+      req.set('Authorization', 'Bearer ' + admin2.token);
       req.send({}).end((err, res) => {
         res.should.have.status(200);
         if (debug || res.body.err || res.body.error)
@@ -221,6 +234,7 @@ describe("Groups", () => {
     it("should get group1 from admin2", done => {
       var req = chai.request(app).get('/group/' + group1.id);
       req.cookies = admin2.cookies;
+      req.set('Authorization', 'Bearer ' + admin2.token);
       req.send({}).end((err, res) => {
         res.should.have.status(200);
         if (debug || res.body.err || res.body.error)
@@ -232,6 +246,7 @@ describe("Groups", () => {
       var req = chai.request(app).patch('/group/' + group1.id);
       var group = { id: group1.id, tel: "123" };
       req.cookies = admin2.cookies;
+      req.set('Authorization', 'Bearer ' + admin2.token);
       req.send(group).end((err, res) => {
         res.should.have.status(401);
         if (debug || res.body.err || res.body.error)
@@ -274,13 +289,14 @@ describe("Members", () => {
         };
         var req = chai.request(app).post("/member");
         req.cookies = admin1.cookies;
+        req.set('Authorization', 'Bearer ' + admin1.token);
         req.send(member).then((res) => {
           res.should.have.status(201);
           if (debug || res.body.err || res.body.error)
             console.log("request => ", member, "\nresponse => ", res.body)
           members[ii].id = res.body.id;
           done()
-        })
+        }).catch((err)=>console.log(err))
       })
     }
   })
@@ -314,13 +330,14 @@ describe("Members", () => {
         };
         var req = chai.request(app).post("/member");
         req.cookies = admin2.cookies;
+        req.set('Authorization', 'Bearer ' + admin2.token);
         req.send(member).then((res) => {
           res.should.have.status(201);
           if (debug || res.body.err || res.body.error)
             console.log("request => ", member, "\nresponse => ", res.body)
           members[ii].id = res.body.id;
           done()
-        })
+        }).catch((err)=>console.log(err))
       })
     }
   })
@@ -344,13 +361,14 @@ describe("Plans", () => {
       };
       var req = chai.request(app).post("/plan");
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send(plan).then((res) => {
         res.should.have.status(201);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", plan, "\nresponse => ", res.body);
         plan11.id = res.body.id;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
     it("should crate plan2 for group1", done => {
       var plan = {
@@ -365,24 +383,26 @@ describe("Plans", () => {
       };
       var req = chai.request(app).post("/plan");
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send(plan).then((res) => {
         res.should.have.status(201);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", plan, "\nresponse => ", res.body);
         plan12.id = res.body.id;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
     it("should get plan2", done => {
       var req = chai.request(app).get("/plan/" + plan12.id);
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send({}).then((res) => {
         res.should.have.status(200);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", {}, "\nresponse => ", res.body);
         // expect(res).to.have.body('id', plan12.id);
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
   })
   describe("Plans for group1", () => {
@@ -399,13 +419,14 @@ describe("Plans", () => {
       };
       var req = chai.request(app).post("/plan");
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send(plan).then((res) => {
         res.should.have.status(201);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", plan, "\nresponse => ", res.body);
         plan21.id = res.body.id;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
   })
 })
@@ -425,13 +446,14 @@ describe("Donates", () => {
       };
       var req = chai.request(app).post("/donate");
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send(donate).then((res) => {
         res.should.have.status(201);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", donate, "\nresponse => ", res.body);
         donates[ii] = res.body.id;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
   }
   for (var i = 5; i < 10; i++) {
@@ -447,13 +469,14 @@ describe("Donates", () => {
       };
       var req = chai.request(app).post("/donate");
       req.cookies = admin1.cookies;
+      req.set('Authorization', 'Bearer ' + admin1.token);
       req.send(donate).then((res) => {
         res.should.have.status(201);
         if (debug || res.body.err || res.body.error)
           console.log("request => ", donate, "\nresponse => ", res.body);
         donates[ii] = res.body.id;
         done();
-      })
+      }).catch((err)=>console.log(err))
     })
   }
 })

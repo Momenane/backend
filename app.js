@@ -48,14 +48,20 @@ app.use('/register', userLimiter);
 app.use('/login', userLimiter);
 
 // Authorization: Bearer token
-var jwtAuth = passport.authenticate('jwt', { session: false })
+var jwtAuth = passport.authenticate('jwt', { session: true })
+function jwtLoggedIn(req, res, next) {
+  if (req.user)
+    next();
+  else
+    jwtAuth(req, res, next)
+}
 
 app.use('/', require('./routes/index'));
-app.use('/user', jwtAuth, require('./routes/users'));
-app.use('/group', jwtAuth, require('./routes/groups'));
-app.use('/member', jwtAuth, require('./routes/members'));
-app.use('/donate', jwtAuth, require('./routes/donates'));
-app.use('/plan', jwtAuth, require('./routes/plans'));
+app.use('/user', jwtLoggedIn, require('./routes/users'));
+app.use('/group', jwtLoggedIn, require('./routes/groups'));
+app.use('/member', jwtLoggedIn, require('./routes/members'));
+app.use('/donate', jwtLoggedIn, require('./routes/donates'));
+app.use('/plan', jwtLoggedIn, require('./routes/plans'));
 
 app.post('/register', (req, res, next) => {
   // check for input data and validate constraint
@@ -64,9 +70,8 @@ app.post('/register', (req, res, next) => {
   // req.body.role = perm.GroupAdmin;
   // todo: check role not is 'Admin'
   // todo: validate password format
-  jwtAuth(req,res);
-  if (req.isAuthenticated())
-    return res.json({ message: "first logout" });
+  if (req.user)
+    return res.status(503).json({ message: "first logout" });
   const isJson = req.is('application/json');
   User.create(req.body)
     .then(user => {
@@ -75,7 +80,7 @@ app.post('/register', (req, res, next) => {
         else if (isJson) {
           var payload = user.jwtPayload();
           var token = jwt.sign(payload);
-          res.status(201).json({ message: "ok", token: token });
+          res.status(201).json({ message: "ok", token, id: user.id });
         }
         else
           res.redirect('/user/id/' + user.id);
